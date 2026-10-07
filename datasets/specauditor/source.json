@@ -1,0 +1,131 @@
+{
+  "adapter": "specauditor-normalized-v1",
+  "files": {
+    "AE.md": {
+      "bytes": 16015,
+      "sha256": "b2b50c662ed3f80f8563d897b78f12d63a7123e90de759c055784cc0210f67b0"
+    },
+    "INSTALL.md": {
+      "bytes": 1831,
+      "sha256": "8a50c6c9ca9668087d330628651e120a2508c579673c896aea1fa517f16dd41b"
+    },
+    "LICENSE": {
+      "bytes": 10258,
+      "sha256": "ea4c76908e358798f1a6e91e904e81a4a3d6a0958bc6ca586f9719d887a0fc90"
+    },
+    "README.md": {
+      "bytes": 4156,
+      "sha256": "9d3cc0814f4ae8c820f7446ba90d178db1cc9092a72a589e6e963673e2543864"
+    },
+    "artifact/common.py": {
+      "bytes": 3919,
+      "sha256": "22923dbe387cf456a42b45e08d14a7d1ef2a137df31ea4ec7c80b78ae307e398"
+    },
+    "artifact/functional/run.py": {
+      "bytes": 17242,
+      "sha256": "e289df491c1bc26933f6e450a35705fa9610e9d81db7e49693b63719471ace7c"
+    },
+    "artifact/reproduced_bug_detection/datasets/checks.csv": {
+      "bytes": 11875,
+      "sha256": "ca7f9d1f1b0e2f05f1fad382fec7a0137b41ed5b58a2e9908564ff634adc24f6"
+    },
+    "artifact/reproduced_bug_detection/reference/reference.csv": {
+      "bytes": 83633,
+      "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+    },
+    "artifact/reproduced_bug_detection/reference/reference_summary.json": {
+      "bytes": 1159,
+      "sha256": "ad3d4019e244a8fbc984bef565dd012e6acf51a3121272d5d2e6ee6d27fb0880"
+    },
+    "artifact/reproduced_bug_detection/reference/reproduced_bug_detection_localization_probe.csv": {
+      "bytes": 13959,
+      "sha256": "bc13b2763be1937cc835b57f6a43405c4e188ccc484ac23a0d581b188af40df5"
+    },
+    "artifact/reproduced_bug_detection/reference/reproduced_bug_detection_localized_additional_violation_reports.csv": {
+      "bytes": 58326,
+      "sha256": "43859be4684249b7319965d390ebdd1c83c0f9ddfa7125c2ec5386cbb7ed7fff"
+    },
+    "artifact/reproduced_bug_detection/reference/reproduced_bug_detection_localized_all_audited_candidates.csv": {
+      "bytes": 290626,
+      "sha256": "560f4cf30fbbce9208d27aa8b8bdff45b1374f797bc61e0276198f4c0fb5ac85"
+    },
+    "artifact/reproduced_bug_detection/reference/reproduced_bug_detection_localized_summary.json": {
+      "bytes": 461,
+      "sha256": "44d32b5463fa58c5dfa29e01702816d142e22350f933764c44d13e773b5e8830"
+    },
+    "artifact/reproduced_bug_detection/reference/reproduced_bug_detection_localized_violation_reports.csv": {
+      "bytes": 133461,
+      "sha256": "0444b7153b6ecb1d291e29c0cd6122c7918edcbfb726db804ae865c69a917fe7"
+    },
+    "artifact/reproduced_bug_detection/run.py": {
+      "bytes": 31911,
+      "sha256": "f1b513f5a35905c1d78edab4b5ec2b750c5446363ff806a7ef98eca2a07ace27"
+    },
+    "artifact/reproduced_bug_detection/run.sh": {
+      "bytes": 2397,
+      "sha256": "64522ffde7d1b38b69078af7210da2398c5deafcbaaf69ffdaba60ddc9965763"
+    },
+    "artifact/reproduced_bug_detection/run_localization_check.sh": {
+      "bytes": 2050,
+      "sha256": "2a2905242d0f1eeb51bf66e8ce6c4924df85a93c4ef6b66f87031223febd67e3"
+    },
+    "artifact/reproduced_generation/datasets/seed_commits.csv": {
+      "bytes": 625,
+      "sha256": "20a6dd8f576878b86ef6461c0ff8fc63346ca135671dfdc48561524b83cdd883"
+    },
+    "artifact/reproduced_generation/run.py": {
+      "bytes": 6599,
+      "sha256": "1e407bde8eb24ac063cf53bf92868d8d9d027f5f3f002dda3c98674e26f8945c"
+    },
+    "prompts/bug_audit_prompts.py": {
+      "bytes": 5541,
+      "sha256": "5f1c98fdcb05ccdf0ec46ee6e9829e54d9ef6d1e4b3b37e7ab2928b66d61a1b1"
+    },
+    "scripts/bug_detection_threaded.py": {
+      "bytes": 34036,
+      "sha256": "b485e1e2e6dfdc4995db8e1988648451336088fcf3f13850d9876df56e2d9bce"
+    },
+    "scripts/utils/ASTParser.py": {
+      "bytes": 2344,
+      "sha256": "418cf6e69c214650b14084ad6768ee3e34836bcc1a70ed28c497e8d5662fc195"
+    },
+    "scripts/utils/CodeSearcher.py": {
+      "bytes": 6307,
+      "sha256": "af33552e87b493acc4fecd8421f4d0e7b916314800245fa7821c0f1b539469b2"
+    }
+  },
+  "license": {
+    "license_path": "LICENSE",
+    "third_party_boundary": "Linux and bundled third-party material retain their own licenses; no blanket relicensing.",
+    "upstream": "Apache-2.0"
+  },
+  "protocol": {
+    "api_called": false,
+    "evaluator_only": [
+      "buggy_symbol",
+      "seed_patch",
+      "case_to_spec_mapping",
+      "raw_refs",
+      "author_reference_outputs"
+    ],
+    "model_input": "whole_specification_portfolio_and_pinned_source_only",
+    "official_functional_demo_and_live_have_assistance": true,
+    "official_localized_gold_budget_correction": true,
+    "official_probe_calls_llm_for_queries": true,
+    "official_targeted_is_oracle_location": true,
+    "scope": "author_selected_positive_artifact_evaluation_subset_not_full_paper",
+    "target_code_executed": false,
+    "upstream_code_executed": false
+  },
+  "schema_version": 1,
+  "target_snapshot": {
+    "commit": "1b237f190eb3d36f52dffe07a40b5eb210280e00",
+    "repository": "https://github.com/torvalds/linux",
+    "snapshot_id": "linux-1b237f190eb3d36f52dffe07a40b5eb210280e00",
+    "tag": "v6.17-rc3"
+  },
+  "upstream": {
+    "commit": "a7f5248890130eac8ba329428672243f80e430bc",
+    "repository": "https://github.com/Yuuoniy/SpecAuditor"
+  }
+}

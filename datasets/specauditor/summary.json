@@ -1,0 +1,44 @@
+{
+  "adapter": "specauditor-normalized-v1",
+  "author_references": {
+    "localization_probe": {
+      "candidate_count_max": 834,
+      "candidate_count_min": 3,
+      "distinct_generated_queries": 19,
+      "found_anywhere": 48,
+      "metric": "membership_in_entire_unranked_candidate_set_not_recall_at_k",
+      "rows": 48
+    },
+    "localized": {
+      "additional_violation_report_rows": 31,
+      "audited_candidate_rows": 163,
+      "detected_bug_rows": 41,
+      "forced_correction_count": null,
+      "forced_correction_count_reason": "shipped_reference_lacks_original_candidate_order_and_forced_flags",
+      "known_answer_budget_correction_present_in_runner": true,
+      "violation_report_rows": 72
+    },
+    "not_runtime_confirmation": true,
+    "provenance": "author_shipped_reference_only_not_our_run",
+    "targeted": {
+      "detected_rows": 39,
+      "input_condition": "known_buggy_function",
+      "rows": 48
+    }
+  },
+  "counts": {
+    "bound_locations": 0,
+    "buggy_symbols": 47,
+    "cases": 48,
+    "seed_patches": 9,
+    "specifications": 18,
+    "target_snapshots": 1
+  },
+  "schema_version": 1,
+  "scope": "author_selected_positive_artifact_evaluation_subset_not_full_paper",
+  "status": {
+    "candidate_pool": "not_built",
+    "evaluation": "not_run",
+    "source_binding": "pending_local_review"
+  }
+}
