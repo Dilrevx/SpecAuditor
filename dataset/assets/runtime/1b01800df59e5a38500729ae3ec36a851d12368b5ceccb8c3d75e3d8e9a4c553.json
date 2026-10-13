@@ -1,0 +1,35 @@
+{
+  "api_called": false,
+  "evaluator_only": [
+    "buggy_symbol",
+    "seed_patch",
+    "case_to_spec_mapping",
+    "raw_refs",
+    "author_reference_outputs"
+  ],
+  "is_this_methods_execution_receipt": false,
+  "model_input": "whole_specification_portfolio_and_pinned_source_only",
+  "official_functional_demo_and_live_have_assistance": true,
+  "official_localized_gold_budget_correction": true,
+  "official_probe_calls_llm_for_queries": true,
+  "official_targeted_is_oracle_location": true,
+  "original_inventory_status": {
+    "candidate_pool": "not_built",
+    "evaluation": "not_run",
+    "source_binding": "pending_local_review"
+  },
+  "schema": "specauditor-author-protocol-v1",
+  "scope": "author_selected_positive_artifact_evaluation_subset_not_full_paper",
+  "target_code_executed": false,
+  "target_snapshot": {
+    "commit": "1b237f190eb3d36f52dffe07a40b5eb210280e00",
+    "repository": "https://github.com/torvalds/linux",
+    "snapshot_id": "linux-1b237f190eb3d36f52dffe07a40b5eb210280e00",
+    "tag": "v6.17-rc3"
+  },
+  "upstream": {
+    "commit": "a7f5248890130eac8ba329428672243f80e430bc",
+    "repository": "https://github.com/Yuuoniy/SpecAuditor"
+  },
+  "upstream_code_executed": false
+}

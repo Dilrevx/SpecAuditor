@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\nThis code definitively violates the security rule. Here's the analysis:\n\n- `of_parse_phandle(dn, \"cci-control-port\", 0)` is called and returns a device node pointer with an incremented reference count\n- The returned pointer `cci_portn` is stored in a local variable\n- The pointer is only used for comparison in the loop: `cci_portn == ports[i].dn`\n- After the loop completes (whether a match is found or not), the function returns without calling `of_node_put(cci_portn)`\n- The local variable `cci_portn` goes out of scope when the function returns, but the reference count remains incremented\n\nThis is NOT a false positive because:\n- The pointer is NOT passed as a parameter from an external function\n- The pointer is NOT assigned to another variable that would maintain the reference outside this function\n- The pointer is NOT returned to the caller for them to manage\n- There are no error handling paths that clean up the resource\n- The function simply uses the pointer for comparison and then abandons it\n\nThe reference count leak occurs in all execution paths of this function. Even when a match is found and the function returns early with `return i`, the `of_node_put()` call is still missing.\n\n3. Confidence: HIGH\n\nThe violation is clear and unambiguous. The `of_parse_phandle()` call increments a reference count that is never decremented, leading to a definite memory leak.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "__cci_ace_get_port",
+  "case_id": "specauditor-case-25c914d375628c8a840a",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

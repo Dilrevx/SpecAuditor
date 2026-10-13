@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code definitively violates the security rule. Here's my analysis:\n\n- `np = of_parse_phandle(of_node, \"memory-region\", 0)` gets a device node pointer with an incremented reference count\n- The pointer `np` is used only once: `err = of_address_to_resource(np, 0, res)`\n- After this usage, `np` is never released with `of_node_put()`\n- The function has multiple return paths (NULL return, ERR_PTR(-ENOMEM), ERR_PTR(err), and normal return), and NONE of them call `of_node_put(np)`\n- This is not a case where the pointer is passed as a parameter - `np` is locally obtained within this function\n- This is not a case where the pointer is assigned to maintain reference elsewhere - it's only used temporarily\n- This is not a case where the function returns the pointer for caller management - the function returns a `struct resource *`, not the device node\n- The error handling paths also fail to release the reference\n\nThe missing `of_node_put(np)` before each return statement creates a definite reference count leak. The correct pattern would be to call `of_node_put(np)` after `of_address_to_resource()` and before any return.\n\n3. **Confidence: HIGH**\n\nThis is a clear-cut violation with no ambiguity. The device node reference is acquired locally, used, and never released, creating a guaranteed memory leak.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "simplefb_get_memory_of",
+  "case_id": "specauditor-case-4bff8eccf8373cdbf577",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

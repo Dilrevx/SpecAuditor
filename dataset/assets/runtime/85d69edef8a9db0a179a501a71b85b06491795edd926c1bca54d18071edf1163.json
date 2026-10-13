@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code violates the security rule because the `count` parameter (which becomes the `len` parameter to `memdup_user_nul`) is not validated before being used for memory allocation.\n\n**Violation analysis:**\n- The `count` parameter is passed directly to `memdup_user_nul(buf, count)` without any bounds checking\n- There is no validation that `count` is within reasonable limits\n- No check for maximum safe allocation size\n- No protection against potential integer overflow scenarios\n\n**Security implications:**\n- An attacker could pass an extremely large `count` value, potentially causing:\n  - Excessive memory allocation that could exhaust system memory\n  - Integer overflow in allocation calculations\n  - Denial of service through memory exhaustion\n\n**What should be present:**\n- Validation that `count > 0` and `count < MAX_SAFE_SIZE` \n- Bounds checking before the `memdup_user_nul` call\n- Proper error handling for invalid size parameters\n\n**Note on memory management:**\nWhile the code properly handles the allocated memory (correctly calls `kfree(kbuf)` in all paths), the security violation occurs at the allocation stage where unbounded input is accepted.\n\n3. **Confidence: HIGH**\n\nThe absence of any size validation before calling `memdup_user_nul` with user-controlled input is a clear violation of the stated security rule requiring len parameter validation.",
+  "author_spec_id": "specauditor-spec-99de14aa3cfb70d752b2",
+  "buggy_symbol": "ofdt_write",
+  "case_id": "specauditor-case-9911a015aae52ded9a62",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "f89672cc3681",
+  "status": "reported_violation"
+}

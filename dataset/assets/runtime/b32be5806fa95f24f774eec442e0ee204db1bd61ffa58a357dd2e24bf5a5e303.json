@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "Looking at this code carefully:\n\n**1. Decision: YES**\n\n**2. Detailed reasoning:**\n\nThis code has a definite violation of the security rule. Here's the analysis:\n\n- `driver_find_device_by_of_node()` returns a device pointer with an incremented reference count that must be released with `put_device()`\n- The function obtains the device reference: `dev = driver_find_device_by_of_node(&altr_sysmgr_driver.driver, (void *)sysmgr_np);`\n- After checking `if (!dev)`, the code proceeds to use the device: `sysmgr = dev_get_drvdata(dev);`\n- The function then returns `sysmgr->regmap` without ever calling `put_device(dev)`\n- The device pointer `dev` is a local variable that goes out of scope when the function returns\n- The caller receives only the `regmap` pointer, not the original device pointer, so they cannot release the reference\n- There is no assignment to another variable that would maintain the reference outside this function\n\nThis creates a definite memory leak - the device reference count remains incremented but there's no way to decrement it since the device pointer is lost when the function returns.\n\nThe proper fix would be to call `put_device(dev)` before returning the regmap, since the regmap itself doesn't depend on holding the device reference.\n\n**3. Confidence: HIGH**\n\nThis is a clear-cut case where a device reference is acquired but never released, and the caller has no way to release it since they only receive the regmap pointer.",
+  "author_spec_id": "specauditor-spec-514feed2c3ed4b063c64",
+  "buggy_symbol": "altr_sysmgr_regmap_lookup_by_phandle",
+  "case_id": "specauditor-case-08cb2d1f695e6465734f",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "10d6bdf53290",
+  "status": "reported_violation"
+}

@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning: \nThis code DEFINITIVELY violates the security rule. The function calls `fwnode_get_named_child_node(port_fwnode, \"fixed-link\")` which returns a pointer that must be released with `fwnode_handle_put()` according to the security rule. However, the returned pointer is used directly in a boolean context within the return statement and is never stored in a variable or passed to `fwnode_handle_put()`.\n\nThe violation occurs because:\n- `fwnode_get_named_child_node()` increments the reference count and returns a pointer\n- The pointer is used only to check if it's non-NULL (implicit boolean conversion)\n- The pointer is immediately discarded without calling `fwnode_handle_put()`\n- This creates a reference count leak - the child node's reference count is incremented but never decremented\n\nThis is a classic reference counting bug where the function acquires a reference but fails to release it. The fact that the pointer is used in a boolean context doesn't exempt it from the cleanup requirement.\n\nThe correct implementation would need to:\n```c\nstruct fwnode_handle *fixed_link = fwnode_get_named_child_node(port_fwnode, \"fixed-link\");\nbool has_fixed_link = !!fixed_link;\nif (fixed_link)\n    fwnode_handle_put(fixed_link);\nreturn (!fwnode_property_present(port_fwnode, \"phy-handle\") &&\n        !fwnode_property_present(port_fwnode, \"managed\") &&\n        !has_fixed_link);\n```\n\n3. Confidence: HIGH",
+  "author_spec_id": "specauditor-spec-33d7c5025b3ebfe8d5e9",
+  "buggy_symbol": "mvpp2_use_acpi_compat_mode",
+  "case_id": "specauditor-case-cc6808535917670d903b",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "reported_violation"
+}

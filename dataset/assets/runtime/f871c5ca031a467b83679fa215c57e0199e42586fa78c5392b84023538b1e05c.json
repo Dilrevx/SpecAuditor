@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code contains a definite security violation. Here's the analysis:\n\n- `of_parse_phandle(np, \"msi-map\", 1)` returns a device node pointer with an incremented reference count\n- The returned pointer is stored in `parent_node`\n- `parent_node` is used to get a fwnode handle via `of_fwnode_handle(parent_node)`\n- However, `parent_node` is never released with `of_node_put()` before the function returns\n\n**Critical violation points:**\n- In the success path: The function returns `cdx_msi_domain` without calling `of_node_put(parent_node)`, causing a reference leak\n- In error paths: When `irq_find_matching_fwnode()` or `msi_create_irq_domain()` fail, the function returns NULL without releasing `parent_node`\n\n**Why this is NOT a false positive:**\n- This is not a parameter pointer - `parent_node` is locally obtained via `of_parse_phandle()`\n- The pointer is not assigned to maintain reference elsewhere - it's only used locally to get the fwnode handle\n- There are no proper error handling paths that clean up the resource\n- The function does not return this pointer for caller management - it returns a different pointer (`cdx_msi_domain`)\n\nThe correct fix would be to add `of_node_put(parent_node)` after the `irq_find_matching_fwnode()` call and before each return statement, since the device node reference is no longer needed after getting the IRQ domain.\n\n3. **Confidence: HIGH**\n\nThe violation is clear and unambiguous - a device node pointer obtained from `of_parse_phandle()` is never released, causing a definite reference count leak in all code paths.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "cdx_msi_domain_init",
+  "case_id": "specauditor-case-981d58be954571dde8d1",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

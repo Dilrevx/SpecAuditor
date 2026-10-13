@@ -1,5 +1,39 @@
 {
   "assets": {
+    "036445570074e17ac60d85885b656c70fbb9eda1b665f28aa768db5400f6a2ef": {
+      "bytes": 2230,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:23",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/036445570074e17ac60d85885b656c70fbb9eda1b665f28aa768db5400f6a2ef.json",
+      "purpose": "reference",
+      "sha256": "291b3bdd841af1aac5e3062bd9e54b207c9196b3b445f071aa339d0812ab6c7b"
+    },
+    "06573e6abbd65a3f9ef6ec0b002d389a1c8bd33f080925e822f8b71d94a8a08f": {
+      "bytes": 2419,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:15",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/06573e6abbd65a3f9ef6ec0b002d389a1c8bd33f080925e822f8b71d94a8a08f.json",
+      "purpose": "reference",
+      "sha256": "4fda5a7ce9b0407879f7d6a763433794d416aae08b8879da0dc0fefd7b8a65f4"
+    },
     "0727a0b3222c9224101a3e1f29f2d8daafa8dacd72ad54a9e13a7b6fee411807": {
       "bytes": 130,
       "kind": "file",
@@ -16,6 +50,23 @@
       "purpose": "reference",
       "sha256": "4563fa801a805d6c56fa678c7579ccff762460042502cea483b664d4b6eba07f"
     },
+    "0dc780a309832c9d3c104add1da4d38037c59a0eaf57bf893153f6149cbbf134": {
+      "bytes": 2420,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:3",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/0dc780a309832c9d3c104add1da4d38037c59a0eaf57bf893153f6149cbbf134.json",
+      "purpose": "reference",
+      "sha256": "c7c53fd45444a83e821bb37d736ea1742be95deffa94768acd57e1cdd9f96a04"
+    },
     "1076ae8e2e41fa8054dfeacdfb8d3446c14203483ca565329a4ff9782d93a723": {
       "bytes": 83633,
       "kind": "file",
@@ -31,6 +82,56 @@
       "path": "assets/runtime/1076ae8e2e41fa8054dfeacdfb8d3446c14203483ca565329a4ff9782d93a723.csv",
       "purpose": "reference",
       "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+    },
+    "1851ee1e16584d817f130923f74d567bacaa83ee76550a3e8654e69978995756": {
+      "bytes": 2234,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:11",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/1851ee1e16584d817f130923f74d567bacaa83ee76550a3e8654e69978995756.json",
+      "purpose": "reference",
+      "sha256": "bde7418412fdb9eaa7672e50a694be990d24618bb92f6336a2f285c01b4e93ae"
+    },
+    "19db8dab5eb0bdfde8f9b97973e168b14cbe6c0aac22bb3058e903791243fd2e": {
+      "bytes": 1911,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:7",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/19db8dab5eb0bdfde8f9b97973e168b14cbe6c0aac22bb3058e903791243fd2e.json",
+      "purpose": "reference",
+      "sha256": "fdebdcfb4473c723ff1bbe902fb8f088f5e8ca669a571629418fa3c277d2d481"
+    },
+    "1b01800df59e5a38500729ae3ec36a851d12368b5ceccb8c3d75e3d8e9a4c553": {
+      "bytes": 1208,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "datasets/specauditor/source.json",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "1b15b92c06dd957a7a8b2e55571c45779d946dd55e8ad397f2d4a7f49cf7e0c3"
+        }
+      ],
+      "path": "assets/runtime/1b01800df59e5a38500729ae3ec36a851d12368b5ceccb8c3d75e3d8e9a4c553.json",
+      "purpose": "reference",
+      "sha256": "a27608a9bb17a61984b344039e3def631dd7c084f064c4e2dbd96aa2b81cf25c"
     },
     "1c97fef71f62c60ee0e69c7386ce312dfdf1fe0a65adb02ba690e9749c43b35a": {
       "bytes": 290626,
@@ -65,6 +166,57 @@
       "purpose": "patch",
       "sha256": "0309ef74867b7f8e644c33425298f75a6978d4c0f22801a747b5c8fb39ce073c"
     },
+    "24095538208aa51f9c6582e7c6caaba74fef74068599cdd26f24fd7ead5343e6": {
+      "bytes": 2144,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:32",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/24095538208aa51f9c6582e7c6caaba74fef74068599cdd26f24fd7ead5343e6.json",
+      "purpose": "reference",
+      "sha256": "bcf96e1314a9a12335c5ec3b45f4c2cbbe72fae2aff0a031c13ff822ad83f19e"
+    },
+    "2c38d385b9bd88d3144cdbd5e83c588b5a4e370d75a970b38f3927bd95e91597": {
+      "bytes": 2336,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:19",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/2c38d385b9bd88d3144cdbd5e83c588b5a4e370d75a970b38f3927bd95e91597.json",
+      "purpose": "reference",
+      "sha256": "35388c95b4d42f811856daa0ffd3d01ff130ee10785b9e57533c4eedc47f6f7c"
+    },
+    "2c3b4e76fca3648a621db329ed3beb6d5771b5bb286007fdc65766ba4a785c8c": {
+      "bytes": 705,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:13",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/2c3b4e76fca3648a621db329ed3beb6d5771b5bb286007fdc65766ba4a785c8c.json",
+      "purpose": "reference",
+      "sha256": "5b55f47ce236b18209d95a621f38400c687c0cb2739b2607e82b7fee4597955d"
+    },
     "2ffa2e3f64bf137dd70602539d30c6672be46da3e8818f4bbc42ef11ae7de881": {
       "bytes": 58326,
       "kind": "file",
@@ -80,6 +232,40 @@
       "path": "assets/runtime/2ffa2e3f64bf137dd70602539d30c6672be46da3e8818f4bbc42ef11ae7de881.csv",
       "purpose": "reference",
       "sha256": "43859be4684249b7319965d390ebdd1c83c0f9ddfa7125c2ec5386cbb7ed7fff"
+    },
+    "31ea1f685d55ab5f7e1955825fe983f754e5d7adc081adb9028893667c1bd272": {
+      "bytes": 2035,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:35",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/31ea1f685d55ab5f7e1955825fe983f754e5d7adc081adb9028893667c1bd272.json",
+      "purpose": "reference",
+      "sha256": "a13b3f41ccf9830093f79d58918aa7f9882e8b4932b5f2592913dca4e21fb301"
+    },
+    "33c9369442e23a81f0de4e05437b4d2e3ee5325ee161eb6db761bb74546d4012": {
+      "bytes": 1992,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:26",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/33c9369442e23a81f0de4e05437b4d2e3ee5325ee161eb6db761bb74546d4012.json",
+      "purpose": "reference",
+      "sha256": "956d9cdb579f4463d9f3cfb2b82ec7812069f70453366b0a1b9a1ff16e3ae76e"
     },
     "36a00ea485442383f7c96e4d284ff4fbd48126bb5737c5ec39ef5314c5673d85": {
       "bytes": 848,
@@ -163,6 +349,57 @@
       "purpose": "knowledge",
       "sha256": "718702dc110577194ceb1e050614e4b260da0ac98a8807495589a885d57daad8"
     },
+    "43275c4fd11f9df3eaf90a8c19b049283b39c80f96ebf9d6781370eb20ddeba0": {
+      "bytes": 2456,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:34",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/43275c4fd11f9df3eaf90a8c19b049283b39c80f96ebf9d6781370eb20ddeba0.json",
+      "purpose": "reference",
+      "sha256": "c5c42312b8366f18a14ff7442c7cc34920f2e2d4143265ca3187c9143ce8c3c9"
+    },
+    "44c7b68abe26fd05fa02eaffe6218d720297e9abf28e90c3fd0eeb52dc4a3b90": {
+      "bytes": 1979,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:22",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/44c7b68abe26fd05fa02eaffe6218d720297e9abf28e90c3fd0eeb52dc4a3b90.json",
+      "purpose": "reference",
+      "sha256": "067f37fb23bbffb7d87aea081063a956a2456a48d32084aab23f87bb08d796ab"
+    },
+    "455b38954145e8b9ab954fa5ab9cf25bf20c9a23bbdd048b20fd3b72aba92ec0": {
+      "bytes": 1894,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:41",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/455b38954145e8b9ab954fa5ab9cf25bf20c9a23bbdd048b20fd3b72aba92ec0.json",
+      "purpose": "reference",
+      "sha256": "0d19fd1b42f897d7fa6f39fa6bb53984563f3ec1ae2f2d7a2120b7ac4d620933"
+    },
     "48041ad30a2b3c56c7b6b6c57a8a102c052e52b1da8e2141d234d5c9166b5e86": {
       "bytes": 608,
       "kind": "file",
@@ -213,6 +450,23 @@
       "purpose": "patch",
       "sha256": "5b1ccfb155f48bdcd7eb2ca8fabf695bbf1534214d3f2008240075a43ebe1dea"
     },
+    "4d81303361909dd434aed8af706e1922db5ccf1b6dbc232e6ff851694efe8e79": {
+      "bytes": 2116,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:45",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/4d81303361909dd434aed8af706e1922db5ccf1b6dbc232e6ff851694efe8e79.json",
+      "purpose": "reference",
+      "sha256": "b1115fc3e058c57023c22964418ddfacd86d60c767fcb758ac1953f450ca784d"
+    },
     "4d88db42c194c6f61707c54ee71e0e932f1460ed73a0a4f96ce686cbe78a1f4b": {
       "bytes": 10258,
       "kind": "file",
@@ -228,6 +482,23 @@
       "path": "assets/runtime/4d88db42c194c6f61707c54ee71e0e932f1460ed73a0a4f96ce686cbe78a1f4b.bin",
       "purpose": "license",
       "sha256": "ea4c76908e358798f1a6e91e904e81a4a3d6a0958bc6ca586f9719d887a0fc90"
+    },
+    "5459c81029bad37c6b5b72b14c8f4e05a3bfd8be8f2f38e8d2bd395b2ae74f27": {
+      "bytes": 2042,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:16",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/5459c81029bad37c6b5b72b14c8f4e05a3bfd8be8f2f38e8d2bd395b2ae74f27.json",
+      "purpose": "reference",
+      "sha256": "03c045a5cec73891419e888d7c3e308822fd53efa15905a249bc6d3c9774d785"
     },
     "5819887bc07fc949581b103452378507500bf771566bb533f4a9a7d959fa9a6f": {
       "bytes": 685,
@@ -245,6 +516,108 @@
       "path": "assets/patches/5819887bc07fc949581b103452378507500bf771566bb533f4a9a7d959fa9a6f.diff",
       "purpose": "patch",
       "sha256": "915cb30bd78066c40b00d88723cb2d3ec45d7ccb1e9763f9f697f44ac4ab6e53"
+    },
+    "5f394330bec4e0504e940ac3c8565eb47dab74229dd06dcf5341bef16eb9945a": {
+      "bytes": 2153,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:8",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/5f394330bec4e0504e940ac3c8565eb47dab74229dd06dcf5341bef16eb9945a.json",
+      "purpose": "reference",
+      "sha256": "fe856fe4cf864eb3f1507fd0e574e01aacdad193563dcf94de1d8686c88d53ad"
+    },
+    "63df781ae870010f9c84116fb354c347b15be6e8b4b27edd5d3c95fda81fe084": {
+      "bytes": 705,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:30",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/63df781ae870010f9c84116fb354c347b15be6e8b4b27edd5d3c95fda81fe084.json",
+      "purpose": "reference",
+      "sha256": "23f6b38d309f1e5637f347a31c5cc1d7cd8b39aa2d92f1221e5bfe72d71dee77"
+    },
+    "6438415a0202248532c55c33f1c4fc1afb5a1d95f2e0595b135d051f5f13ae27": {
+      "bytes": 2654,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:20",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/6438415a0202248532c55c33f1c4fc1afb5a1d95f2e0595b135d051f5f13ae27.json",
+      "purpose": "reference",
+      "sha256": "175733205fd034349d9ff15988bcebef19f80d829ea3f57fea922b707805b8ba"
+    },
+    "6d711b0640b8ba27731a704b893fd28703e935944662ba071495e9d30b06c240": {
+      "bytes": 2287,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:48",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/6d711b0640b8ba27731a704b893fd28703e935944662ba071495e9d30b06c240.json",
+      "purpose": "reference",
+      "sha256": "d2869b2a4b1076a3749fe4a78661aa9d2846c16dd1841d3e70143e1a415df81c"
+    },
+    "6ea0f4d696eb3d6e08b9864f96dc698adee445e113fb74b866a0e9711d90e622": {
+      "bytes": 2442,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:14",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/6ea0f4d696eb3d6e08b9864f96dc698adee445e113fb74b866a0e9711d90e622.json",
+      "purpose": "reference",
+      "sha256": "0f597b92b8b8e992f9cbcc9b2c1c6ef037ba56924b829017685fc1721abae683"
+    },
+    "7529be276ccae0f6562185602d7dbd84617ba3b286c5d52de99f069d3ce1796e": {
+      "bytes": 2303,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:28",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/7529be276ccae0f6562185602d7dbd84617ba3b286c5d52de99f069d3ce1796e.json",
+      "purpose": "reference",
+      "sha256": "1d906a938c14b079f73a3393dbf19adfeed63538c37f5169f2e7d220d52b76a6"
     },
     "77bbb97b1319374ed15d76f1d76796ddfa65fa627c04146bf4dc54c2729925ad": {
       "bytes": 496,
@@ -327,6 +700,57 @@
       "purpose": "evidence",
       "sha256": "1b15b92c06dd957a7a8b2e55571c45779d946dd55e8ad397f2d4a7f49cf7e0c3"
     },
+    "81c738f25e1dbcfc55467d67980800e163765a8d10644514bc9655c5ac4e0a31": {
+      "bytes": 1995,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:1",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/81c738f25e1dbcfc55467d67980800e163765a8d10644514bc9655c5ac4e0a31.json",
+      "purpose": "reference",
+      "sha256": "7acf253042b267b9181751685d203e6b47783704d251d8cd8886a66a888502db"
+    },
+    "83d31a4cf9aea6c26956112343922b898f5fc3db0e123e3f7a96d108c8e565c9": {
+      "bytes": 2418,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:43",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/83d31a4cf9aea6c26956112343922b898f5fc3db0e123e3f7a96d108c8e565c9.json",
+      "purpose": "reference",
+      "sha256": "f25af37f6c9c1797483e7a9b14e7ae5f7010fd913779708f4dfe6de359432cd2"
+    },
+    "85d69edef8a9db0a179a501a71b85b06491795edd926c1bca54d18071edf1163": {
+      "bytes": 2032,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:46",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/85d69edef8a9db0a179a501a71b85b06491795edd926c1bca54d18071edf1163.json",
+      "purpose": "reference",
+      "sha256": "b60cedf35b13f062db21297de0efe03f3aa199e65ee17277fbd89c38d0ce2b4c"
+    },
     "881bf9b01ee2e91278e9a6b4c437d7f7a1e61af6e244652326559105dad51041": {
       "bytes": 439,
       "kind": "file",
@@ -343,6 +767,142 @@
       "path": "assets/patches/881bf9b01ee2e91278e9a6b4c437d7f7a1e61af6e244652326559105dad51041.diff",
       "purpose": "patch",
       "sha256": "14ddcfa096b48836e1839184c336608f7e827bc0f33bfa6c5bd5bdedd5738b60"
+    },
+    "88d88bb921383682f829a980f90255851b5562318cd090a7a56088a39d0839f0": {
+      "bytes": 2197,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:25",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/88d88bb921383682f829a980f90255851b5562318cd090a7a56088a39d0839f0.json",
+      "purpose": "reference",
+      "sha256": "5dfdedbb5696e6010cedf8fb2064a89c615e4d3563133ebe4ebbe7548f25eac7"
+    },
+    "89e329b93b2f86a42ef1ddd939e1e22a87835eaf02fd34eab4c67c1370661d8c": {
+      "bytes": 2070,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:36",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/89e329b93b2f86a42ef1ddd939e1e22a87835eaf02fd34eab4c67c1370661d8c.json",
+      "purpose": "reference",
+      "sha256": "a77c5d20a005913a734953439eca84d96fa935ff10442a9a1aba7a07819d6278"
+    },
+    "8a26da04a8ca1936b3fa5a98a17b7518701eda89294c9f767623b8e5da4d286b": {
+      "bytes": 2204,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:44",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/8a26da04a8ca1936b3fa5a98a17b7518701eda89294c9f767623b8e5da4d286b.json",
+      "purpose": "reference",
+      "sha256": "33096701e81ad20312a617ba3978a6422b2b03a9c59c80df62169da1e6298770"
+    },
+    "93376cccb272ca142122f39aa36f8d6e5170e5885c55f70c6603c7afe68b8aab": {
+      "bytes": 2434,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:42",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/93376cccb272ca142122f39aa36f8d6e5170e5885c55f70c6603c7afe68b8aab.json",
+      "purpose": "reference",
+      "sha256": "fd2f8c106abb82eb1ef8c47283c23c9973fec6353f7624603b6f3b2173c8ec10"
+    },
+    "947e1da417031809dacd639e457ddefa830bfee138e90dec247953536edc18a1": {
+      "bytes": 2018,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:21",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/947e1da417031809dacd639e457ddefa830bfee138e90dec247953536edc18a1.json",
+      "purpose": "reference",
+      "sha256": "2cf4a014ec1fd6155c7ac03da366efbae900947d953d8283dd6295aabf8bf90f"
+    },
+    "974fc028fb7b8610a58e4591d08ca5f86cde15785c15e1e72958610310f00a65": {
+      "bytes": 1957,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:4",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/974fc028fb7b8610a58e4591d08ca5f86cde15785c15e1e72958610310f00a65.json",
+      "purpose": "reference",
+      "sha256": "ffcd4c02f9484693c91604e906e71ba42c783870fb74c16f9a6f1773e31fbb51"
+    },
+    "9880409d75f528337474db4a591f9fdfc011acd45710ec54c9d10dfd6db41e52": {
+      "bytes": 1945,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:40",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/9880409d75f528337474db4a591f9fdfc011acd45710ec54c9d10dfd6db41e52.json",
+      "purpose": "reference",
+      "sha256": "19474c804ee033e313f7f5465c95581e5f8828138c8fae5e1cb0cf1993bba57d"
+    },
+    "a134c24fbaa2024c7175dd19fd8326efaf3cea1dcc36cfc70e234bd3cdc8073c": {
+      "bytes": 2342,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:38",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/a134c24fbaa2024c7175dd19fd8326efaf3cea1dcc36cfc70e234bd3cdc8073c.json",
+      "purpose": "reference",
+      "sha256": "012141d2d5ca491d7df1a9fbbaa6915cd2afa722bceec77ec7c695f41fc42e2c"
     },
     "a1497bc64776ecc50969d58019f38d10f3937261a6cec7842435ed9a5a8236de": {
       "bytes": 468,
@@ -377,6 +937,108 @@
       "purpose": "reference",
       "sha256": "44d32b5463fa58c5dfa29e01702816d142e22350f933764c44d13e773b5e8830"
     },
+    "a500721d1fbc24982639f655693d1abb3a2cf257285f95d3b1ff333ba4968b87": {
+      "bytes": 2237,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:17",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/a500721d1fbc24982639f655693d1abb3a2cf257285f95d3b1ff333ba4968b87.json",
+      "purpose": "reference",
+      "sha256": "1450c3bf6b4bd865426af4d131fcd22f835304d2478438fb217a9b2ece8ac998"
+    },
+    "aa771f4581410dbec7330d2ce2f215485212a26c9bb1bb944118c919a2040a75": {
+      "bytes": 2071,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:31",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/aa771f4581410dbec7330d2ce2f215485212a26c9bb1bb944118c919a2040a75.json",
+      "purpose": "reference",
+      "sha256": "4e8d65cb0c2b232ccd650e248764a2124bdaf3c5f5697e7b550409c5c6eb808b"
+    },
+    "ac28b2e287beed878cad6d97c57d97ae2225ef393efeb87c296707800c72164f": {
+      "bytes": 698,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:37",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/ac28b2e287beed878cad6d97c57d97ae2225ef393efeb87c296707800c72164f.json",
+      "purpose": "reference",
+      "sha256": "00ef38cdd2eedf57ba63703bd508343aa58a7e8b8df2cc45708370a22f177a80"
+    },
+    "b0093f5e874c6febecccd6df3c6eafa5649c3a6c9e8273dbf8256b3c102d8506": {
+      "bytes": 2151,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:10",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/b0093f5e874c6febecccd6df3c6eafa5649c3a6c9e8273dbf8256b3c102d8506.json",
+      "purpose": "reference",
+      "sha256": "ad5d99543401be2009bff319055e50a5aaf945f4b99095745e1c96c5fbc299f6"
+    },
+    "b32be5806fa95f24f774eec442e0ee204db1bd61ffa58a357dd2e24bf5a5e303": {
+      "bytes": 2090,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:5",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/b32be5806fa95f24f774eec442e0ee204db1bd61ffa58a357dd2e24bf5a5e303.json",
+      "purpose": "reference",
+      "sha256": "0db8fdd1d41a54882cd74f8a01b879f71e6a0e9b2934a764d00bbbed1c8e1a9d"
+    },
+    "b8f424b006bc19ea19bfd868d3a5997f7816235091fec63c0505a3a2a21df707": {
+      "bytes": 1888,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:2",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/b8f424b006bc19ea19bfd868d3a5997f7816235091fec63c0505a3a2a21df707.json",
+      "purpose": "reference",
+      "sha256": "d3555261c927037068957326527b08b6c2c8e89475961d5602d829b5ff285bf3"
+    },
     "ba980ea8655c3fa960cdbb089a210cf29c09967d30836e43bba0e851937d7375": {
       "bytes": 704,
       "kind": "file",
@@ -393,6 +1055,57 @@
       "path": "assets/patches/ba980ea8655c3fa960cdbb089a210cf29c09967d30836e43bba0e851937d7375.diff",
       "purpose": "patch",
       "sha256": "63bad347697df9f8d55c785c194212c23da369d03f34a01973f788ca46ef4af0"
+    },
+    "bba1ff04fea8e29c82024ee3d43de3f71b81fca0bbec44a1c551ddacf166c5ae": {
+      "bytes": 2126,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:12",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/bba1ff04fea8e29c82024ee3d43de3f71b81fca0bbec44a1c551ddacf166c5ae.json",
+      "purpose": "reference",
+      "sha256": "507aa84576d5756299bf0b5b14e290dd144648c7984255df3c5941d3eb883da8"
+    },
+    "bd002723549754491d8972049039ba239922c7a53f82843f8d1d92427ffc08f5": {
+      "bytes": 2224,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:47",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/bd002723549754491d8972049039ba239922c7a53f82843f8d1d92427ffc08f5.json",
+      "purpose": "reference",
+      "sha256": "6cd917c249960e6d4f8c225393b60f3a25f993d6c591abbdd1911357b98eff4b"
+    },
+    "c4b74c83f44fa5f8354d8c7628fbff25e16eef4acbc4b51cca68ea6f6d1d47f2": {
+      "bytes": 2083,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:27",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/c4b74c83f44fa5f8354d8c7628fbff25e16eef4acbc4b51cca68ea6f6d1d47f2.json",
+      "purpose": "reference",
+      "sha256": "e57125dfb2162baa9324d38eaced91f8b2323be61267fae26476e8a7ce00742e"
     },
     "d3bdf5957828d7a50f756c62f08ddf3f6748aa260bd562607ec83c1ee2357005": {
       "bytes": 16704,
@@ -425,6 +1138,23 @@
       "path": "assets/runtime/d7f40b1baca743338f695b9f1950a2a0fb63f7542d0be439ed08e0b893c723ca.csv",
       "purpose": "reference",
       "sha256": "0444b7153b6ecb1d291e29c0cd6122c7918edcbfb726db804ae865c69a917fe7"
+    },
+    "dca22c907c80bb300f8bc904c428dd05556095510b59af5b6fcc6e9da937b7bf": {
+      "bytes": 2351,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:6",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/dca22c907c80bb300f8bc904c428dd05556095510b59af5b6fcc6e9da937b7bf.json",
+      "purpose": "reference",
+      "sha256": "20d10e3114225415736fe6f41f923be834087801765000f6a416a130af8bb02c"
     },
     "df2731cc666dd3fa4fc0318cfdc6df94ceaa6942fb6b517ae6a212e454a1e802": {
       "bytes": 625,
@@ -459,6 +1189,74 @@
       "purpose": "patch",
       "sha256": "2ad878db755d124dc40ffbc3de10dc9d2c6dcd6c43959b6796bcfbdd9bccaafe"
     },
+    "e0b6ae48fa0ab1aea04ff2d628fe39791e5a35528b9d244a4fde0fe5366b3eb6": {
+      "bytes": 2326,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:9",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/e0b6ae48fa0ab1aea04ff2d628fe39791e5a35528b9d244a4fde0fe5366b3eb6.json",
+      "purpose": "reference",
+      "sha256": "27035369f1cf6dbfe1eb455d64bd2159699c6aac29448817fcaf75b237ee5f2b"
+    },
+    "e37f2e04b3c14b6648bd5b0bd75a25f9c568f156f9759a43d4c3375ab0a416f2": {
+      "bytes": 2167,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:33",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/e37f2e04b3c14b6648bd5b0bd75a25f9c568f156f9759a43d4c3375ab0a416f2.json",
+      "purpose": "reference",
+      "sha256": "6fde569516f2c4e84fa79cee1370508fa13305ca1d3634b7c82dd11cfc7a20ef"
+    },
+    "e38f10335d538f33774765dca9fa17a81ab80981b2641e66f152b863e72dde33": {
+      "bytes": 2973,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:29",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/e38f10335d538f33774765dca9fa17a81ab80981b2641e66f152b863e72dde33.json",
+      "purpose": "reference",
+      "sha256": "7cb3758f030658ed5f1cabacea5e142ad0282b769f503d5b3f49e8728d412354"
+    },
+    "ea15b16182581c1f8bf677d700b27b72a144ce0f8a0eb6027e532c0a9426815f": {
+      "bytes": 2359,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:39",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/ea15b16182581c1f8bf677d700b27b72a144ce0f8a0eb6027e532c0a9426815f.json",
+      "purpose": "reference",
+      "sha256": "adc9dffc9cb37379ffdef7d88d757973422298bab3463f1d95f4aa65cb0df10e"
+    },
     "ec7feac60ae28936245151f479128334f53ba4443a1d947ad65ca49bfd911885": {
       "bytes": 405,
       "kind": "file",
@@ -476,6 +1274,23 @@
       "purpose": "patch",
       "sha256": "fb630691153410336ce0489b6337c17c671bdf0a2f8155fdcd0851137f454f8e"
     },
+    "ecd4827039dc33c1b5ae103fb4fd3389fbfdb32819541d2ac3f61acec2fa1fb8": {
+      "bytes": 1915,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:24",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/ecd4827039dc33c1b5ae103fb4fd3389fbfdb32819541d2ac3f61acec2fa1fb8.json",
+      "purpose": "reference",
+      "sha256": "2f43f642a07b856c0305b1444c54be1ed1fd340ab8e8ff2911cc59f9f56c7c41"
+    },
     "f66e7f9dab57f9f20a842996118f086d5f6c674e1bd02517a2fbcfbfac71654a": {
       "bytes": 11875,
       "kind": "file",
@@ -491,13 +1306,30 @@
       "path": "assets/runtime/f66e7f9dab57f9f20a842996118f086d5f6c674e1bd02517a2fbcfbfac71654a.csv",
       "purpose": "evidence",
       "sha256": "ca7f9d1f1b0e2f05f1fad382fec7a0137b41ed5b58a2e9908564ff634adc24f6"
+    },
+    "f871c5ca031a467b83679fa215c57e0199e42586fa78c5392b84023538b1e05c": {
+      "bytes": 2236,
+      "kind": "json",
+      "mode": "100644",
+      "origins": [
+        {
+          "commit": "dca9c5991707f695331ef1ec7e9ca5b56232fd8a",
+          "path": "artifact/reproduced_bug_detection/reference/reference.csv",
+          "pointer": "csv-data-row:18",
+          "repository": "https://github.com/Dilrevx/SpecAuditor",
+          "sha256": "229d820ca6771fc477e64fea1901f1a601d86e8c180026e41f87667167ef71b7"
+        }
+      ],
+      "path": "assets/runtime/f871c5ca031a467b83679fa215c57e0199e42586fa78c5392b84023538b1e05c.json",
+      "purpose": "reference",
+      "sha256": "e20747a32b2117e1e835c55fdc1a3b4c714e2d41c2ca9a2b5921b80e3e76b2b7"
     }
   },
   "benchmark_id": "specauditor",
   "cases": {
     "path": "cases.jsonl",
     "records": 48,
-    "sha256": "52a5fa4f5a8eaf790a2ca4eb5c49bd8a4bb3ad7883df1bf15ad19599a6e4b54f"
+    "sha256": "f19f6b06a403a639f005a1fc76fa61a2e667564fb24ed637c4ae8d318b05887d"
   },
   "counts": {
     "case_groups": 48,
@@ -511,7 +1343,7 @@
     },
     "versions": 144
   },
-  "importer_sha256": "ed5e9e145c4120adbddf6607c09c169f076ca67830816bb97186d00f86316ada",
+  "importer_sha256": "3df87b6fa7512a7f957c5cd99ad666775f1f4208ff8d5db813cd0d41a5f1a0d4",
   "license": {
     "assets": [
       "4d88db42c194c6f61707c54ee71e0e932f1460ed73a0a4f96ce686cbe78a1f4b",

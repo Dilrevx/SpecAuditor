@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\n\nThis code contains a DEFINITE violation of the security rule. Here's my analysis:\n\n**The violation:**\n- Line `endpoint = of_graph_get_endpoint_by_regs(node, 1, -1);` obtains a device_node pointer\n- The `endpoint` pointer is then used in subsequent calls to `of_property_count_u32_elems()` and `of_property_read_u32_array()`\n- However, there is NO corresponding `of_node_put(endpoint)` call anywhere in the function\n- The function returns successfully at the end without releasing the reference\n\n**Why this is NOT a false positive:**\n- The pointer is NOT passed as a parameter - it's obtained locally within this function\n- The pointer is NOT assigned to any persistent structure or returned to caller\n- The pointer is NOT stored in any global or long-lived variable\n- There are NO error handling paths that would clean up this resource\n- The function completes execution without transferring ownership of the reference\n\n**The security impact:**\nThis creates a memory leak where the device_node's reference count is incremented by `of_graph_get_endpoint_by_regs()` but never decremented. Over time, this prevents the device_node from being properly freed, leading to memory leaks.\n\n**Correct fix would be:**\nAdd `of_node_put(endpoint);` before the function returns, or handle the case where `endpoint` might be NULL from the `of_graph_get_endpoint_by_regs()` call.\n\n3. Confidence: HIGH\n\nThe violation is clear and unambiguous - a reference is acquired but never released within the same function scope.",
+  "author_spec_id": "specauditor-spec-e72d8b9ffc0888915ab8",
+  "buggy_symbol": "samsung_dsim_parse_dt",
+  "case_id": "specauditor-case-dd9714e1490491b7f3ce",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "reported_violation"
+}

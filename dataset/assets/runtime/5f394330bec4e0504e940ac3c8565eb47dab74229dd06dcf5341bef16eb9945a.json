@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "**Decision: YES**\n\n**Detailed reasoning:**\n\nThis code contains a definite violation of the security rule. Here's the analysis:\n\n1. **of_find_device_by_node() called**: The function calls `pdev = of_find_device_by_node(np)` which returns a platform_device pointer with an incremented reference count.\n\n2. **Reference not released**: After obtaining the device reference, the code uses it to:\n   - Check if platform driver data exists\n   - Get a regmap from the device\n   - But never calls `put_device()` to release the reference\n\n3. **Multiple exit paths without cleanup**: The function has several exit points:\n   - Early return with `ERR_PTR(-EPROBE_DEFER)` if no driver data\n   - Normal exit through the `out` label\n   - Neither path releases the device reference obtained from `of_find_device_by_node()`\n\n4. **No assignment to persistent storage**: The `pdev` pointer is only used locally within this function and is not stored in any data structure that would maintain the reference beyond this function's scope.\n\n5. **Reference leak**: When this function returns (either successfully or with an error), the reference count on the PMC device remains elevated, causing a memory leak.\n\nThe correct implementation should call `put_device(&pdev->dev)` before any return path after successfully obtaining the device reference.\n\n**Confidence: HIGH**\n\nThis is a clear-cut case of a reference leak where `of_find_device_by_node()` increments a reference count that is never decremented with the corresponding `put_device()` call.",
+  "author_spec_id": "specauditor-spec-0a569e7d211f5a2247d6",
+  "buggy_symbol": "tegra210_xusb_padctl_probe",
+  "case_id": "specauditor-case-bd21de1596d64942d0c6",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "10d6bdf53290",
+  "status": "reported_violation"
+}

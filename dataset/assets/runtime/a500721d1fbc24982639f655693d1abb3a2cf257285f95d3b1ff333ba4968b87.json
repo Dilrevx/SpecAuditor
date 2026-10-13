@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "**Decision: YES**\n\n**Detailed reasoning:**\n\nThis code has a definite violation of the security rule. Here's my analysis:\n\n1. **of_parse_phandle() calls**: The function calls `of_parse_phandle(cpu_node, \"cpu-idle-states\", i)` in a loop, which returns device node pointers that increment the reference count.\n\n2. **Missing of_node_put() calls**: After obtaining each `state_node` pointer, the code uses it to:\n   - Check availability with `of_device_is_available(state_node)`\n   - Read properties with `of_property_read_bool(state_node, \"ti,idle-wkup-m3\")`\n   \n   However, there are **no corresponding of_node_put() calls** to decrement the reference count.\n\n3. **Reference count leak**: Each successful call to `of_parse_phandle()` increments the device node's reference count. Without `of_node_put()`, these references are never released, causing a refcount leak.\n\n4. **Multiple leak scenarios**:\n   - Normal path: When `state_node` is processed and the loop continues\n   - Early termination: When `i == CPUIDLE_STATE_MAX` and the loop breaks\n   - Skip path: When `of_device_is_available(state_node)` returns false and `continue` is executed\n\n5. **Not a false positive**: This is not a case where:\n   - The pointer is passed as a parameter (it's locally obtained)\n   - The pointer is assigned to maintain reference elsewhere\n   - There's proper error handling\n   - The pointer is returned for caller management\n\n**Confidence: HIGH**\n\nThe violation is clear and definite - every `of_parse_phandle()` call should be paired with `of_node_put()` before the pointer goes out of scope, but none are present in this code.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "amx3_idle_init",
+  "case_id": "specauditor-case-7040c971a8399c623c60",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

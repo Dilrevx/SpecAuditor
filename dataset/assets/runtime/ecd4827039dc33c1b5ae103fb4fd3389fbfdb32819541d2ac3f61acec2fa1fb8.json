@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\nThis code contains a definite violation of the security rule. Let me trace through the issue:\n\n- `tr_np = of_parse_phandle(child, \"trip\", 0);` - This call returns a device node pointer with an incremented reference count\n- `if (tr_np != trip->priv) continue;` - If the condition is true, the function continues to the next iteration without calling `of_node_put(tr_np)`\n- Even in the success path where `tr_np == trip->priv`, the function proceeds to the cooling device lookup and may return true via `thermal_of_get_cooling_spec()`, but never calls `of_node_put(tr_np)`\n- The pointer `tr_np` goes out of scope at the end of each loop iteration without being properly released\n\nThis is not a case of:\n- Pointer passed as parameter (tr_np is locally obtained)\n- Pointer assigned to maintain reference (tr_np is only used for comparison)\n- Proper error handling (no of_node_put calls anywhere)\n- Returning pointer to caller (tr_np is not returned)\n\nThe reference count acquired by `of_parse_phandle()` is never decremented, causing a definite refcount leak in all execution paths.\n\n3. Confidence: HIGH\n\nThe violation is clear and unambiguous - every call to `of_parse_phandle()` must be paired with `of_node_put()`, and this code lacks that pairing entirely.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "thermal_of_cm_lookup",
+  "case_id": "specauditor-case-42604b4afa17f39d927e",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

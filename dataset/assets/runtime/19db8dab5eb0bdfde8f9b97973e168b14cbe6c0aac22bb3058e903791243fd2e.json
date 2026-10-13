@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\n\nThis code DEFINITIVELY violates the security rule. Here's the analysis:\n\n- `pdev` is obtained from `of_find_device_by_node(ofdma->of_node)` at the beginning of the function\n- The function uses `pdev` throughout for error messages (`dev_err(&pdev->dev, ...)`) and debug output\n- However, there is NO corresponding `put_device(pdev)` call anywhere in the function\n- The `pdev` pointer is not returned to the caller, so the caller cannot manage the reference\n- The `pdev` pointer is not assigned to any persistent structure that would maintain the reference\n- All error paths (`goto free_map`, `goto clear_bitmap`) exit without releasing the device reference\n- The successful return path also exits without releasing the device reference\n\nThis creates a definite reference leak. Every time this function is called, it increments the reference count on the platform device but never decrements it, leading to a memory leak and preventing proper device cleanup.\n\nThe correct fix would be to add `put_device(pdev)` before each return path, or use a single cleanup section that calls `put_device(pdev)` before returning.\n\n3. Confidence: HIGH\n\nThis is a clear-cut violation with no ambiguity. The reference is acquired but never released in any code path.",
+  "author_spec_id": "specauditor-spec-0a569e7d211f5a2247d6",
+  "buggy_symbol": "rzn1_dmamux_route_allocate",
+  "case_id": "specauditor-case-8c90b564d9252425cd66",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "10d6bdf53290",
+  "status": "reported_violation"
+}

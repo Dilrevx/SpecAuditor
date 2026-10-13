@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "**Decision: YES**\n\n**Detailed reasoning:**\n\nThis code contains a definite security violation. Here's my analysis:\n\n1. **Pointer acquisition**: The function calls `of_graph_get_endpoint_by_regs(pdev->dev.of_node, 1, -1)` which returns a device_node pointer with an incremented reference count.\n\n2. **Pointer usage**: The returned `endpoint` pointer is used only once in `of_property_count_elems_of_size(endpoint, \"data-lanes\", sizeof(u32))`.\n\n3. **Missing cleanup**: After this usage, the `endpoint` pointer is never passed to `of_node_put()` to decrement the reference count.\n\n4. **Multiple exit paths**: The function has several return paths:\n   - Early returns on error conditions (lines with `return -EINVAL` and `return ret`)\n   - Normal success return (`return 0`)\n   \n   None of these paths call `of_node_put(endpoint)`.\n\n5. **No reference transfer**: The pointer is not:\n   - Assigned to a persistent structure member\n   - Returned to the caller\n   - Passed to another function that would take ownership\n\n6. **Scope limitation**: The `endpoint` variable is local to this function, so once the function returns, the pointer becomes inaccessible while the reference count remains elevated.\n\nThis creates a definite memory leak where the device_node's reference count is permanently incremented, preventing proper cleanup of the device tree node.\n\n**Confidence: HIGH**\n\nThe violation is clear-cut - there's an acquired reference that is never released, with no mechanism for the caller or any other code to release it.",
+  "author_spec_id": "specauditor-spec-e72d8b9ffc0888915ab8",
+  "buggy_symbol": "mtk_dp_dt_parse",
+  "case_id": "specauditor-case-8cd718699b1d7222fd23",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "reported_violation"
+}

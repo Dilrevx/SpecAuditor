@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\n\nThis code DEFINITELY violates the security rule. Here's my analysis:\n\n**Rule Violation Analysis:**\nThe security rule requires that \"the len parameter must be validated to be within reasonable bounds (greater than or equal to 0 and less than a maximum safe allocation size) before performing allocation and copy operations.\"\n\n**Code Analysis:**\n```c\nkern_buf = memdup_user_nul(buf, nbytes);\n```\n\nThe `nbytes` parameter is passed directly to `memdup_user_nul()` without ANY validation. This is a clear violation because:\n\n1. **No bounds checking**: There is no validation that `nbytes` is within reasonable limits\n2. **No maximum size check**: An attacker could pass an extremely large `nbytes` value (e.g., SIZE_MAX or close to it)\n3. **No minimum size check**: While less critical, there's no check for negative values (though `size_t` is unsigned, this could still be relevant for very large values that wrap)\n\n**Attack Scenarios:**\n- An attacker could pass a massive `nbytes` value causing:\n  - Excessive memory allocation that could exhaust system memory\n  - Potential integer overflow issues in the allocation path\n  - Denial of service through memory exhaustion\n\n**What Should Be Done:**\nThe code should validate `nbytes` before the `memdup_user_nul()` call, something like:\n```c\nif (nbytes == 0 || nbytes > SOME_REASONABLE_MAX)\n    return -EINVAL;\n```\n\n**Memory Management Analysis:**\nWhile the memory management itself is correct (proper `kfree()` calls on both success and error paths), this doesn't address the fundamental security issue of unbounded allocation.\n\n3. Confidence: HIGH\n\nThis is a textbook example of the security rule violation - direct use of user-controlled size parameter without validation before allocation.",
+  "author_spec_id": "specauditor-spec-99de14aa3cfb70d752b2",
+  "buggy_symbol": "bnad_debugfs_write_regwr",
+  "case_id": "specauditor-case-8a21dfea5188713d14d5",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "f89672cc3681",
+  "status": "reported_violation"
+}

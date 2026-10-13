@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "The localized buggy function does not contain the target API call in the current kernel tree.",
+  "author_spec_id": "specauditor-spec-33d7c5025b3ebfe8d5e9",
+  "buggy_symbol": "mv88e6xxx_port_setup_leds",
+  "case_id": "specauditor-case-290896f5d0106f5541d7",
+  "confidence": "TARGET_NOT_FOUND",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": false,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "target_not_found"
+}

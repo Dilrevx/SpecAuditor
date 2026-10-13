@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code has a DEFINITE violation of the security rule. Here's the analysis:\n\n**The violation occurs with `control_node`:**\n```c\ncontrol_node = of_parse_phandle(node, \"ctrl-module\", 0);\nif (!control_node) {\n    dev_err(&pdev->dev, \"Failed to get control device phandle\\n\");\n    return -EINVAL;\n}\n\ncontrol_pdev = of_find_device_by_node(control_node);\nif (!control_pdev) {\n    dev_err(&pdev->dev, \"Failed to get control device\\n\");\n    return -EINVAL;  // BUG: control_node reference leaked here\n}\n```\n\n**Why this is a definite violation:**\n- `of_parse_phandle()` returns a device node pointer with an incremented reference count\n- The pointer is stored in `control_node` \n- After calling `of_find_device_by_node(control_node)`, the `control_node` pointer is no longer used\n- There are two error return paths (`return -EINVAL`) where `control_node` is not released with `of_node_put()`\n- Even in the success path, `control_node` is never released - it goes out of scope without cleanup\n\n**The correct fix would be:**\n```c\ncontrol_node = of_parse_phandle(node, \"ctrl-module\", 0);\nif (!control_node) {\n    dev_err(&pdev->dev, \"Failed to get control device phandle\\n\");\n    return -EINVAL;\n}\n\ncontrol_pdev = of_find_device_by_node(control_node);\nof_node_put(control_node);  // Release the reference immediately after use\n\nif (!control_pdev) {\n    dev_err(&pdev->dev, \"Failed to get control device\\n\");\n    return -EINVAL;\n}\n```\n\nThis is not a false positive because:\n- The pointer is not passed as a parameter from outside\n- It's not assigned to maintain the reference elsewhere\n- There's no conditional logic preventing the leak\n- The function doesn't return this pointer for caller management\n- This is a local variable that goes out of scope without proper cleanup\n\n3. **Confidence: HIGH**\n\nThe violation is clear and unambiguous. Every code path that uses `control_node` fails to call `of_node_put()`, creating a definite reference count leak.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "omap_usb2_probe",
+  "case_id": "specauditor-case-1be0c46c95205046d51b",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

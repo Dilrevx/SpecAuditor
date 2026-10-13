@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: **YES**\n\n2. Detailed reasoning:\n\nThis code contains a **DEFINITE violation** of the security rule. Here's the analysis:\n\n**The violation:**\n- `np = of_parse_phandle(dev->of_node, \"nvidia,pmc\", 0)` returns a device node pointer with an incremented reference count\n- The function uses this pointer in `pdev = of_find_device_by_node(np)` \n- However, `np` is **never released** with `of_node_put(np)` before the function returns\n\n**Critical flow analysis:**\n- After `of_find_device_by_node(np)`, the `np` pointer is no longer needed\n- The function continues to use `pdev` (not `np`) for subsequent operations\n- Both success path (`goto out`) and all error paths (`return ERR_PTR(...)`) exit without calling `of_node_put(np)`\n- Even if `np` is NULL (when `of_parse_phandle` fails), the code safely jumps to `out:` label, but when `np` is valid, it's leaked\n\n**Why this is NOT a false positive:**\n- The pointer is NOT passed as a parameter - it's locally created\n- The pointer is NOT assigned to maintain reference elsewhere - `pdev` is derived from `np` but doesn't hold the device node reference\n- There are NO error handling paths that properly release `np`\n- The function does NOT return `np` for caller management - it returns `&padctl->base`\n\n**The fix would be:**\n```c\npdev = of_find_device_by_node(np);\nof_node_put(np);  // Add this line\nif (!pdev) {\n    dev_warn(dev, \"PMC device is not available\\n\");\n    goto out;\n}\n```\n\n3. Confidence: **HIGH**\n\nThis is a clear refcount leak where the device node reference obtained from `of_parse_phandle()` is never properly released.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "tegra210_xusb_padctl_probe",
+  "case_id": "specauditor-case-19d0e94bb79298d7afbe",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

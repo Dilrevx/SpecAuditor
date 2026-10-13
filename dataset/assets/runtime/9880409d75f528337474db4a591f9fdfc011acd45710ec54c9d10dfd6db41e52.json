@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: **YES**\n\n2. Detailed reasoning:\nThis code definitively violates the security rule. Here's my analysis:\n\n- `pci_get_subsys()` returns a `pci_dev` pointer with an incremented reference count\n- The pointer is assigned to the global variable `nforce2_dev`\n- The function successfully completes and returns 0, but **never calls `pci_dev_put()`**\n- This is NOT a case where:\n  - The pointer is passed as a parameter (it's obtained locally via `pci_get_subsys()`)\n  - The pointer is returned to caller for management (function returns int, not the pointer)\n  - There are proper error handling paths (the NULL check is for detection failure, not cleanup)\n  - Another variable maintains the reference (only `nforce2_dev` holds it)\n\nThe reference count acquired by `pci_get_subsys()` is never decremented, creating a definitive memory leak. Even though `nforce2_dev` is global and may be used elsewhere, this function is responsible for decrementing the reference it acquired. The typical pattern would be to call `pci_dev_put(nforce2_dev)` either at the end of this function, in a cleanup function, or in an exit path.\n\n3. Confidence: **HIGH**\n\nThis is a clear-cut violation - the function acquires a reference via `pci_get_subsys()` but never releases it with `pci_dev_put()`, resulting in a guaranteed reference count leak.",
+  "author_spec_id": "specauditor-spec-2744afccfdaf3b406863",
+  "buggy_symbol": "nforce2_detect_chipset",
+  "case_id": "specauditor-case-e4770e01b6e808a70845",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "e3862093ee93",
+  "status": "reported_violation"
+}

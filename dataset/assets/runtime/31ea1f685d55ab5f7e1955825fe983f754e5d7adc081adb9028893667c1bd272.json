@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\nThis code has a definite memory leak violation. Let me trace through the critical path:\n\n- `remote = of_graph_get_remote_endpoint(ep);` - This call returns a device_node pointer with an incremented reference count that must be released with of_node_put()\n- The code then uses `remote` in `of_property_read_u32(remote, \"reg\", &reg)`\n- If `of_property_read_u32()` fails (ret != 0), the code executes `continue`, which jumps to the next loop iteration\n- When `continue` is executed, the `remote` pointer is abandoned without calling `of_node_put(remote)`, causing a memory leak\n- Even in the success case where `ret = reg` is executed, the function returns without calling `of_node_put(remote)`\n\nThe code violates the security rule in two scenarios:\n1. When `of_property_read_u32()` fails - `remote` is leaked via the `continue` statement\n2. When `of_property_read_u32()` succeeds - `remote` is leaked when the function returns\n\nThe correct fix would be to add `of_node_put(remote)` before both the `continue` statement and before setting `ret = reg`.\n\nThis is not a false positive because:\n- The pointer is not passed as a parameter (it's locally obtained)\n- The pointer is not assigned to maintain reference elsewhere\n- There are no proper error handling paths for this resource\n- The function does not return the pointer for caller management\n\n3. Confidence: HIGH",
+  "author_spec_id": "specauditor-spec-ac278db09abd6568d79e",
+  "buggy_symbol": "sun4i_tcon_of_get_id_from_port",
+  "case_id": "specauditor-case-6a694b8b5361ef56e3b5",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "reported_violation"
+}

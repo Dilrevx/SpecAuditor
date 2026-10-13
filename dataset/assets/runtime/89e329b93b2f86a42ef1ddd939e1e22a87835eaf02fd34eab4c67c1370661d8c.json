@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: **YES**\n\n2. Detailed reasoning:\nThis code contains a definite security violation. Let me analyze the key points:\n\n- The function calls `of_slim_get_device(&ctrl->ctrl, node)` which returns a slim_device reference that must be released with a corresponding put function according to the security rule\n- The returned `sbdev` pointer is only used locally within the loop iteration for a single operation (`slim_get_logical_addr(sbdev)`)\n- After the `slim_get_logical_addr(sbdev)` call, the `sbdev` pointer goes out of scope at the end of each loop iteration\n- There is no call to any put function (like `slim_device_put()` or similar) to release the reference\n- This is not a case where:\n  - The pointer is passed as a parameter (it's locally obtained)\n  - The pointer is assigned to maintain the reference elsewhere\n  - The pointer is returned for caller management\n  - There are error handling paths that clean up (the error path still leaks)\n\nThe pattern shows a clear resource leak: each iteration acquires a reference via `of_slim_get_device()` but never releases it. This will cause reference count leaks for each child node processed, leading to memory that can never be freed.\n\n3. Confidence: **HIGH**\n\nThis is a textbook example of the security rule violation - acquiring a reference through `of_slim_get_device()` without the corresponding release, with no legitimate reason for maintaining the reference beyond the local scope.",
+  "author_spec_id": "specauditor-spec-1b9669ee743b9eeab1b9",
+  "buggy_symbol": "qcom_slim_ngd_notify_slaves",
+  "case_id": "specauditor-case-51f8d79980448863df3f",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "c158cf914713",
+  "status": "reported_violation"
+}

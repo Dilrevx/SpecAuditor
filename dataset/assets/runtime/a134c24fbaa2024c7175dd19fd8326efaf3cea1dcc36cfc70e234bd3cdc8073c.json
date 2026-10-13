@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code contains definite violations of the pci_get_device security rule. Let me analyze each section:\n\n**First loop (0xa00a devices):**\n- Gets initial device with `pci_get_device(PCI_VENDOR_ID_PASEMI, 0xa00a, NULL)`\n- In the while loop, calls `pci_get_device(PCI_VENDOR_ID_PASEMI, 0xa00a, dev)` which automatically decrements the reference count of the previous `dev` and returns the next device\n- However, when the loop exits (either `dev` is NULL or `reg >= MAX_MCE_REGS`), the final `dev` pointer is not released with `pci_dev_put()`\n\n**Second section (0xa001 device):**\n- Gets device with `pci_get_device(PCI_VENDOR_ID_PASEMI, 0xa001, NULL)`\n- Uses the device to get configuration addresses\n- Never calls `pci_dev_put(dev)` to release the reference\n\n**Third section (0xa009 device):**\n- Gets device with `pci_get_device(PCI_VENDOR_ID_PASEMI, 0xa009, NULL)`\n- Uses the device to get configuration addresses  \n- Never calls `pci_dev_put(dev)` to release the reference\n\nThe code only extracts configuration addresses from these devices and doesn't need to maintain long-term references to them. Each `pci_get_device()` call increments the reference count, but there are no corresponding `pci_dev_put()` calls to decrement them, causing definite memory leaks.\n\nThis is not a case where:\n- The pointer is passed as a parameter (it's locally obtained)\n- The pointer is assigned to maintain reference elsewhere\n- There are proper error handling paths\n- The function returns the pointer for caller management\n\n3. **Confidence: HIGH**\n\nThe violations are clear and unambiguous - multiple `pci_get_device()` calls without corresponding `pci_dev_put()` calls for cleanup.",
+  "author_spec_id": "specauditor-spec-245b6ca5e83fdcc89a18",
+  "buggy_symbol": "pas_setup_mce_regs",
+  "case_id": "specauditor-case-056b9516914a5cafe901",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "e3862093ee93",
+  "status": "reported_violation"
+}

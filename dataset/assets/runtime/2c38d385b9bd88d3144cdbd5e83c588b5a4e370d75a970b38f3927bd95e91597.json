@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "## Analysis\n\n**Decision: YES**\n\n**Detailed Reasoning:**\n\nThis code contains a definite violation of the security rule. Here's my analysis:\n\n1. **of_parse_phandle() call identified**: Line `np = of_parse_phandle(node, \"fsl,imx7d-pcie-phy\", 0);` returns a device node pointer with an incremented reference count.\n\n2. **Usage pattern**: The pointer `np` is used in the following block:\n   - Checked for validity (`if (np)`)\n   - Used in `of_address_to_resource(np, 0, &res)` \n   - After this usage, the pointer is never released\n\n3. **Missing of_node_put()**: There is no corresponding `of_node_put(np)` call anywhere in the function, neither in the success path nor in error paths.\n\n4. **Error handling analysis**: Even in the error path where `of_address_to_resource()` fails, the function returns immediately without releasing the reference: `return ret;`\n\n5. **Function scope**: This is a complete function (`imx_pcie_probe`) and the `np` variable is local to this function. The pointer is not:\n   - Passed as a parameter from outside\n   - Assigned to any persistent data structure\n   - Returned to the caller\n   - Stored in any way that would maintain the reference beyond this function\n\n6. **Memory leak consequence**: When this function exits (either successfully or on error after the `of_parse_phandle` call), the reference count on the device node remains elevated, causing a reference count leak.\n\nThis is a clear violation of the security rule requiring device node pointers from `of_parse_phandle()` to be released with `of_node_put()`.\n\n**Confidence: HIGH**\n\nThe violation is unambiguous - there's a clear acquisition of a reference without any corresponding release, leading to a definite memory leak.",
+  "author_spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+  "buggy_symbol": "imx_pcie_probe",
+  "case_id": "specauditor-case-78e289ebf27199db0936",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "a508e33956b5",
+  "status": "reported_violation"
+}

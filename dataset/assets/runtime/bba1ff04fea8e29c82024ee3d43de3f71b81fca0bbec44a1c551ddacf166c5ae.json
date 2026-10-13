@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. **Decision: YES**\n\n2. **Detailed reasoning:**\n\nThis code contains a definite security violation of the kvrealloc rule. Here's the analysis:\n\n- The `markers` variable appears to be a global/static variable (not passed as parameter)\n- When `kvrealloc(markers, newsize, GFP_KERNEL)` is called, the original `markers` pointer is passed as the first parameter\n- If kvrealloc succeeds, it frees the original allocation and returns a new pointer\n- However, if kvrealloc fails and returns NULL, the original `markers` memory is **not automatically freed** by kvrealloc\n- The code then assigns NULL to `markers` (`markers = kvrealloc(...)` where kvrealloc returned NULL)\n- This overwrites the original pointer without freeing it first\n- The error path (`goto error`) does not attempt to free the original allocation\n- The original memory allocation is permanently lost, creating a memory leak\n\nThe violation occurs because when kvrealloc fails, the original memory remains allocated but the pointer to it is lost when `markers` is set to NULL. The function should either:\n- Preserve the original pointer before calling kvrealloc, or  \n- Explicitly free the original allocation in the error path\n\nThis is not a false positive because:\n- `markers` is not a parameter (it's a module-level variable)\n- No other variable maintains a reference to the original allocation\n- The error handling does not properly manage the original memory\n- The function doesn't return the pointer for external management\n\n3. **Confidence: HIGH**",
+  "author_spec_id": "specauditor-spec-c2886b8bcae796a7e795",
+  "buggy_symbol": "add_marker",
+  "case_id": "specauditor-case-bf071af4a454317aac67",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "42378a9ca553",
+  "status": "reported_violation"
+}

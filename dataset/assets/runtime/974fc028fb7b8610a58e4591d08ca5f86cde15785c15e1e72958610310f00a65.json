@@ -1,0 +1,16 @@
+{
+  "absence_of_report_is_not_a_safe_negative": true,
+  "analysis": "1. Decision: YES\n\n2. Detailed reasoning:\n\nThis code contains a definite security violation. Here's my analysis:\n\n- `bus_find_device_by_name()` is called and returns a device reference with an incremented reference count\n- The returned `dev` pointer is stored in a local variable\n- The function uses the device reference to extract information (`pdev->devfn`) and assign it to `*fun_index`\n- However, the function returns without calling `put_device(dev)` to release the reference\n\nThis is a clear violation because:\n- The device reference is obtained locally within this function\n- The reference is used for data extraction only\n- The function completes its work and returns, but never releases the reference\n- There is no mechanism for the caller to know about or manage this reference (the `dev` pointer is not returned or stored anywhere accessible to the caller)\n- The reference count remains incremented, causing a memory leak\n\nThe function should call `put_device(dev)` before the `return 0;` statement to properly release the device reference. The current implementation will leak device references on every successful call.\n\n3. Confidence: HIGH\n\nThe violation is clear-cut - a device reference is acquired, used locally, and never released before function exit. This is exactly the type of bug the security rule is designed to prevent.",
+  "author_spec_id": "specauditor-spec-4578961e0c1986c0228d",
+  "buggy_symbol": "qm_get_qos_value",
+  "case_id": "specauditor-case-bd4b70ec398dfc4c6537",
+  "confidence": "HIGH",
+  "input_condition": "known_buggy_function",
+  "is_this_methods_output": false,
+  "observation_does_not_change_primary_positive_label": true,
+  "observed_violation": true,
+  "runtime_confirmation": false,
+  "schema": "specauditor-author-reference-observation-v1",
+  "seed_patch_declaration": "10d6bdf53290",
+  "status": "reported_violation"
+}
