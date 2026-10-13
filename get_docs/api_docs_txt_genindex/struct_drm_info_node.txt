@@ -1,9 +1,0 @@
-Struct: struct drm_info_node
-
-Per-minor debugfs node structure
-
-Members
-  minor
-    struct drm_minor for this node.
-  info_ent
-    template for this node.

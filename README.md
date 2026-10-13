@@ -1,49 +1,28 @@
-# SpecAuditor: Generating Audit Specifications for LLM-Driven Bug Detection
+# SpecAuditor benchmark data
 
+Versioned author data in the shared `bench-dataset-v1` format.
 
-SpecAuditor is an end-to-end framework for generating audit specifications to guide LLM-driven bug detection.
+- `dataset/cases.jsonl`: 48 author detection rows, covering 47 buggy symbols.
+- `dataset/manifest.json`: immutable provenance, assets, counts and licenses.
+- `dataset/assets/`: 18-spec global portfolio, original tables, author references,
+  12 generation-seed patches and license evidence.
 
-The main motivation behind SpecAuditor is that direct LLM auditing is often ineffective and expensive. Without explicit guidance, LLMs tend to focus on familiar surface patterns and struggle to reason about project-specific semantics and rarer bug behaviors. SpecAuditor addresses this by automatically constructing audit specifications that tell the model:
+The detection subset uses 9 seed patches; the separate generation input has 12.
+The target is Linux `v6.17-rc3`. Historical seed repairs are knowledge, not fixes
+for the detected target bugs. Author reference outputs are not new method results.
 
-- where to audit
-- how to check
+Use [embed](https://github.com/Dilrevx/embed) for methods, the
+[dataset lock](https://github.com/Dilrevx/embed/blob/spec-audit-ab/benchmarks/specauditor/dataset-lock.json),
+and [shared commands](https://github.com/Dilrevx/embed/blob/spec-audit-ab/docs/method-runner.md).
+From an embed checkout:
 
-At a high level, SpecAuditor follows the three-stage design:
+```sh
+PYTHONPATH=src python -m embedbench validate-dataset \
+  --benchmark-checkout ../SpecAuditor --lock benchmarks/specauditor/dataset-lock.json
+```
 
-1. extract seed specifications from bug patches
-2. generalize the seed specifications, retrieve semantically related entities from documentation, and generate new concrete specifications
-3. use the generated specifications to drive code search and LLM-driven bug auditing
-
-
-
-## Pipeline
-
-| Stage                         | Goal                                                                                          | Main scripts                                                                                                                                |
-| ----------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Seed extraction               | Extract a target (entity) and predicate from a given patch and validate it                    | `scripts/spec_extract.py`, `scripts/spec_validator.py`                                                                                      |
-| Generalization and generation | Generalize the seed rule, retrieve related entities, and generate new concrete specifications | `scripts/spec_generalize.py`, `scripts/similar_target_search.py`, `scripts/spec_generation.py`, `scripts/format_spec_generation_results.py` |
-| Guided bug detection          | Localize relevant code and audit it with the generated specifications                         | `scripts/bug_detection_threaded.py`                                                                                                         |
-
-## Repository Map
-
-| Path        | Purpose                                                          |
-| ----------- | ---------------------------------------------------------------- |
-| `scripts/`  | Main SpecAuditor pipeline                                        |
-| `prompts/`  | Prompt templates used by all stages                              |
-| `get_docs/` | Offline documentation cache and prebuilt Chroma store            |
-| `artifact/` | scripts, datasets, and reference outputs for artifact evaluation |
-
-## Installation
-We provide a Dockerfile to set up the environment. Please refer to [INSTALL.md](./INSTALL.md)  for details.
-
-## Testing and Artifact Evaluation
-
-
-Please refer to  [AE.md](./AE.md) for detailed instructions.
-
-| Entry                                                         | Purpose                                                                                                                |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `artifact/functional/run.sh`                                  | End-to-end functional run on one seed patch                                                                            |
-| `artifact/reproduced_generation/run.sh`                       | Reproduced extraction/generalization/generation run on subset                                                          |
-| `artifact/reproduced_bug_detection/run.sh`                    | Reproduced bug-detection benchmark with integrated candidate localization and bug auditing                             |
-| `artifact/reproduced_bug_detection/run_localization_check.sh` | Localization-only check that tests whether the expected buggy functions can be automatically surfaced before auditing. |
+Original inputs and normalization remain traceable at
+[`dca9c59`](https://github.com/Dilrevx/SpecAuditor/tree/dca9c5991707f695331ef1ec7e9ca5b56232fd8a).
+The [upstream method](https://github.com/Yuuoniy/SpecAuditor) and its AE code are
+not maintained in this data branch. Apache-2.0 does not relicense the Linux seed
+diffs; their original license evidence is retained in the asset inventory.

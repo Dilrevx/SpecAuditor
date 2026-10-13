@@ -1,3 +1,0 @@
-Enum: enum vc_ctl_state
-
-control characters state of a vt

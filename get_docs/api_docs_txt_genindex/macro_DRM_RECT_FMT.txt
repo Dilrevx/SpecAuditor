@@ -1,7 +1,0 @@
-Macro: DRM_RECT_FMT
-
-
-
-Parameters
-  r
-    rectangle struct

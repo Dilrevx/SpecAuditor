@@ -1,3 +1,0 @@
-Function: enum c3_isp_params_ae_tap_points
-
-Tap points for the AE statistics

@@ -1,2 +1,0 @@
-Struct: struct cec_adap_ops
-

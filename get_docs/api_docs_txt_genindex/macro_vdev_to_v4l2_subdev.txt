@@ -1,7 +1,0 @@
-Macro: vdev_to_v4l2_subdev
-
-
-
-Parameters
-  vdev
-    pointer to struct video_device

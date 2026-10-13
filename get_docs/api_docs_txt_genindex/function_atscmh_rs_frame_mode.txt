@@ -1,3 +1,0 @@
-Function: enum atscmh_rs_frame_mode
-
-Reed Solomon (RS) frame mode.

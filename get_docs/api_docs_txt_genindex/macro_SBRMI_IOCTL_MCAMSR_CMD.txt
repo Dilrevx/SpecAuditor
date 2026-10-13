@@ -1,2 +1,0 @@
-Macro: SBRMI_IOCTL_MCAMSR_CMD
-

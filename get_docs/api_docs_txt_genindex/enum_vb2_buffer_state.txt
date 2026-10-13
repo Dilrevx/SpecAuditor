@@ -1,3 +1,0 @@
-Enum: enum vb2_buffer_state
-
-current video buffer state.

@@ -1,3 +1,0 @@
-Enum: enum rate_info_flags
-
-bitrate info flags

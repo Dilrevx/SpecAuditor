@@ -1,3 +1,0 @@
-Function: enum fe_delivery_system
-
-Type of the delivery system

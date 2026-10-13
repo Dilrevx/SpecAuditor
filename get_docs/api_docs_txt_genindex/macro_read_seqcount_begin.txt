@@ -1,7 +1,0 @@
-Macro: read_seqcount_begin
-
-
-
-Parameters
-  s
-    Pointer to seqcount_t or any of the seqcount_LOCKNAME_t variants

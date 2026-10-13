@@ -1,7 +1,0 @@
-Function: bool tipc_ehdr_validate ( struct sk_buff * skb )
-
-Validate an encryption message
-
-Parameters
-  struct sk_buff *skb
-    the message buffer

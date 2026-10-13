@@ -1,3 +1,0 @@
-Enum: enum netlink_attribute_type
-
-type of an attribute

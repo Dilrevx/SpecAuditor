@@ -1,9 +1,0 @@
-Function: s64 div64_s64 ( s64 dividend , s64 divisor )
-
-signed 64bit divide with 64bit divisor
-
-Parameters
-  s64 dividend
-    signed 64bit dividend
-  s64 divisor
-    signed 64bit divisor

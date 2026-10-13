@@ -1,3 +1,0 @@
-Macro: enum ssam_cdev_request_flags
-
-Request flags for SSAM cdev request IOCTL.

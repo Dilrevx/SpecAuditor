@@ -1,7 +1,0 @@
-Function: void memblock_discard ( void )
-
-discard memory and reserved arrays if they were allocated
-
-Parameters
-  void
-    no arguments

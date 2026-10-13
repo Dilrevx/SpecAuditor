@@ -1,7 +1,0 @@
-Function: u8 ssh_packet_priority_get_base ( u8 priority )
-
-Get base priority from packet priority.
-
-Parameters
-  u8 priority
-    The packet priority.

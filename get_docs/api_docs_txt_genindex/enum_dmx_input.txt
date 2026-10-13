@@ -1,3 +1,0 @@
-Enum: enum dmx_input
-
-Input from the demux.

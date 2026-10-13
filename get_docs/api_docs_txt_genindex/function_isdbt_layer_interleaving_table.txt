@@ -1,2 +1,0 @@
-Function: type isdbt_layer_interleaving_table
-

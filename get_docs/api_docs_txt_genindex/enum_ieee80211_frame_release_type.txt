@@ -1,3 +1,0 @@
-Enum: enum ieee80211_frame_release_type
-
-frame release reason

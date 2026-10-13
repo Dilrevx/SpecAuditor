@@ -1,3 +1,0 @@
-Enum: enum iommufd_vfio_ioas_op
-
-IOMMU_VFIO_IOAS_* ioctls

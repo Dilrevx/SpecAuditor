@@ -1,3 +1,0 @@
-Enum: enum i3c_open_drain_speed
-
-I3C open-drain speed

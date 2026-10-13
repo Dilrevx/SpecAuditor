@@ -1,2 +1,0 @@
-Type: type cec_event_state_change
-

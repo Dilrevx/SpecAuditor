@@ -1,3 +1,0 @@
-Enum: enum dmx_frontend_source
-
-Used to identify the type of frontend

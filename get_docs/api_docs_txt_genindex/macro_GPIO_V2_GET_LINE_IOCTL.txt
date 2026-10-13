@@ -1,2 +1,0 @@
-Macro: GPIO_V2_GET_LINE_IOCTL
-

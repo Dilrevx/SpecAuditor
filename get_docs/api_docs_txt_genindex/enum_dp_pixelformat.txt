@@ -1,3 +1,0 @@
-Enum: enum dp_pixelformat
-
-drm DP Pixel encoding formats

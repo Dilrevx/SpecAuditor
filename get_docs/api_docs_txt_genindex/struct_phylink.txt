@@ -1,7 +1,0 @@
-Struct: struct phylink
-
-internal data type for phylink
-
-Members
-  void phylink_set_port_modes ( unsigned long * mask ) ¶
-    set the port type modes in the ethtool mask

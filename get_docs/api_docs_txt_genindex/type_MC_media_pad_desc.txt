@@ -1,2 +1,0 @@
-Type: type media_pad_desc
-

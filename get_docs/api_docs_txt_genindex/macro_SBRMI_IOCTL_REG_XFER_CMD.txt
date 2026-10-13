@@ -1,2 +1,0 @@
-Macro: SBRMI_IOCTL_REG_XFER_CMD
-

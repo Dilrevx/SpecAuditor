@@ -1,3 +1,0 @@
-Enum: enum wiphy_params_flags
-
-set_wiphy_params bitfield values

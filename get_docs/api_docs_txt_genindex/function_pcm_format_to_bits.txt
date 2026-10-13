@@ -1,7 +1,0 @@
-Function: u64 pcm_format_to_bits ( snd_pcm_format_t pcm_format )
-
-Strong-typed conversion of pcm_format to bitwise
-
-Parameters
-  snd_pcm_format_t pcm_format
-    PCM format

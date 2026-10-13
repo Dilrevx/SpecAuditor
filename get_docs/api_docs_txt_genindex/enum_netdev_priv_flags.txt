@@ -1,3 +1,0 @@
-Enum: enum netdev_priv_flags
-
-struct net_device priv_flags

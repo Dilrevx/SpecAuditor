@@ -1,2 +1,0 @@
-Macro: TEST_HARNESS_MAIN
-

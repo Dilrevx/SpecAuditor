@@ -1,3 +1,0 @@
-Enum: enum slab_flags
-
-How the slab flags bits are used.

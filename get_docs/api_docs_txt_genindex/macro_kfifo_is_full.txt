@@ -1,7 +1,0 @@
-Macro: kfifo_is_full
-
-
-
-Parameters
-  fifo
-    address of the fifo to be used

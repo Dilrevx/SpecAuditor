@@ -1,0 +1,2 @@
+dataset/** -text
+dataset/assets/** -whitespace

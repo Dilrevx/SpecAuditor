@@ -1,3 +1,0 @@
-Function: enum ethtool_pse_event
-
-PSE event list for the PSE controller

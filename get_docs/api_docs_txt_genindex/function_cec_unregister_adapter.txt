@@ -1,2 +1,0 @@
-Function: void cec_unregister_adapter ( struct cec_adapter * adap ) ;
-

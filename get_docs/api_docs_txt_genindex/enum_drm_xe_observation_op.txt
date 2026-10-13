@@ -1,3 +1,0 @@
-Enum: enum drm_xe_observation_op
-
-Observation stream ops

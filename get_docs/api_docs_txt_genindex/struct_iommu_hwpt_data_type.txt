@@ -1,3 +1,0 @@
-Struct: enum iommu_hwpt_data_type
-
-IOMMU HWPT Data Type

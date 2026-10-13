@@ -1,7 +1,0 @@
-Function: void unregister_netdevice_many ( struct list_head * head )
-
-unregister many devices
-
-Parameters
-  struct list_head *head
-    list of devices

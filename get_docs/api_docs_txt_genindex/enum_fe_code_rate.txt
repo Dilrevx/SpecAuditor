@@ -1,3 +1,0 @@
-Enum: enum fe_code_rate
-
-Type of Forward Error Correction (FEC)

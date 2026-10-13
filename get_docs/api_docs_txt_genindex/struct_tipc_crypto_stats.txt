@@ -1,7 +1,0 @@
-Struct: struct tipc_crypto_stats
-
-TIPC Crypto statistics
-
-Members
-  stat
-    array of crypto statistics

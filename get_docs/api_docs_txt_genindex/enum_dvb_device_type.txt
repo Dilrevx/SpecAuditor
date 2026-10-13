@@ -1,3 +1,0 @@
-Enum: enum dvb_device_type
-
-type of the Digital TV device

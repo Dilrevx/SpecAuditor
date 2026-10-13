@@ -1,3 +1,0 @@
-Enum: enum xsdfec_axis_width
-
-AXIS_WIDTH.DIN Setting for 128-bit width.

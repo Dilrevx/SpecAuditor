@@ -1,3 +1,0 @@
-Enum: enum hw_event_mc_err_type
-
-type of the detected error

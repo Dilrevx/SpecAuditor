@@ -1,0 +1,126 @@
+{
+  "patch_hash_policy": "git-diff-no-ext-diff-no-textconv-no-renames-binary",
+  "schema": "specauditor-generation-seeds-v1",
+  "seeds": [
+    {
+      "after_commit": "07161b2416f740a2cb87faa5566873f401440a61",
+      "before_commit": "41cca0542d7c79b6be3920a917f643c075ad1561",
+      "description": "usbnet_get_endpoints error-check fix",
+      "git_diff_sha256": "14ddcfa096b48836e1839184c336608f7e827bc0f33bfa6c5bd5bdedd5738b60",
+      "patch_asset": "881bf9b01ee2e91278e9a6b4c437d7f7a1e61af6e244652326559105dad51041",
+      "patch_url": "https://github.com/torvalds/linux/commit/07161b2416f740a2cb87faa5566873f401440a61",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "07161b2416f7"
+    },
+    {
+      "after_commit": "b505063910c134778202dfad9332dfcecb76bab3",
+      "before_commit": "dcfecb989afdf9101ee42e2adf04756a2ea4819d",
+      "description": "debugfs_lookup reference-release fix",
+      "git_diff_sha256": "6af32f3a6a8a9f4cd4f3940e0add331aaa06d5956a0574c9802b460bba309b8e",
+      "patch_asset": "48041ad30a2b3c56c7b6b6c57a8a102c052e52b1da8e2141d234d5c9166b5e86",
+      "patch_url": "https://github.com/torvalds/linux/commit/b505063910c134778202dfad9332dfcecb76bab3",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "b505063910c1"
+    },
+    {
+      "after_commit": "a508e33956b538e034ed5df619a73ec7c15bda72",
+      "before_commit": "5396ccbd79ab03bd588bcfaa59f58c9bbf9fdcde",
+      "description": "of_parse_phandle refcount-release fix",
+      "git_diff_sha256": "5b1ccfb155f48bdcd7eb2ca8fabf695bbf1534214d3f2008240075a43ebe1dea",
+      "patch_asset": "4910bbc7540403298f72fd65e9d3d15cb5a214ffb642ee09e7cbabc6507e24cb",
+      "patch_url": "https://github.com/torvalds/linux/commit/a508e33956b538e034ed5df619a73ec7c15bda72",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "a508e33956b5"
+    },
+    {
+      "after_commit": "e3862093ee93fcfbdadcb7957f5f8974fffa806a",
+      "before_commit": "d27a835f41d947f62e6a95e89ba523299c9e6437",
+      "description": "of_phy_find_device reference-release fix",
+      "git_diff_sha256": "a984ee120c1c3113be4ef963a8fece72a54a7d976084681f22e7563e12fb51d4",
+      "patch_asset": "3b001e60eba492bc82a0ef72d1f0184cc10723207fa7f89f55b0940a08ac76bd",
+      "patch_url": "https://github.com/torvalds/linux/commit/e3862093ee93fcfbdadcb7957f5f8974fffa806a",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "e3862093ee93"
+    },
+    {
+      "after_commit": "fa0308134d26dbbeb209a1581eea46df663866b6",
+      "before_commit": "3d3f43fab4cfb9cf245e3dbffa1736ce925bb54a",
+      "description": "dma_mapping_error verification fix",
+      "git_diff_sha256": "da8b32d34dcda0ff7056312cd87b57e4cf49f8ef86f48cc979158c105d825f9c",
+      "patch_asset": "7b6079c562823c9ae7bf683067edf7dfcc50b12c251509f57e43c80b550d6ff8",
+      "patch_url": "https://github.com/torvalds/linux/commit/fa0308134d26dbbeb209a1581eea46df663866b6",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "fa0308134d26"
+    },
+    {
+      "after_commit": "10d6bdf532902be1d8aa5900b3c03c5671612aa2",
+      "before_commit": "bf476fe22aa1851bab4728e0c49025a6a0bea307",
+      "description": "of_find_device_by_node refcount leak fix",
+      "git_diff_sha256": "0309ef74867b7f8e644c33425298f75a6978d4c0f22801a747b5c8fb39ce073c",
+      "patch_asset": "205965cf80246a8772ca87d70dfce055c7ed856b34bc62dbf95edd653835d055",
+      "patch_url": "https://github.com/torvalds/linux/commit/10d6bdf532902be1d8aa5900b3c03c5671612aa2",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "10d6bdf53290"
+    },
+    {
+      "after_commit": "2985b1844f3f3447f2d938eff1ef6762592065a5",
+      "before_commit": "43ee11adcb940204948ac0ca3a05d6178f0e8b08",
+      "description": "kstrndup cleanup-order fix",
+      "git_diff_sha256": "63bad347697df9f8d55c785c194212c23da369d03f34a01973f788ca46ef4af0",
+      "patch_asset": "ba980ea8655c3fa960cdbb089a210cf29c09967d30836e43bba0e851937d7375",
+      "patch_url": "https://github.com/torvalds/linux/commit/2985b1844f3f3447f2d938eff1ef6762592065a5",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "2985b1844f3f"
+    },
+    {
+      "after_commit": "99ca0b57e49fb73624eede1c4396d9e3d10ccf14",
+      "before_commit": "91e8f835a7eda4ba2c0c4002a3108a0e3b22d34e",
+      "description": "pci_disable_device double-disable fix",
+      "git_diff_sha256": "bc3e13e2a17c5e20c83c44f015392921521e2d7ebf791e997322010628eb2d59",
+      "patch_asset": "36a00ea485442383f7c96e4d284ff4fbd48126bb5737c5ec39ef5314c5673d85",
+      "patch_url": "https://github.com/torvalds/linux/commit/99ca0b57e49fb73624eede1c4396d9e3d10ccf14",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "99ca0b57e49f"
+    },
+    {
+      "after_commit": "42378a9ca55347102bbf86708776061d8fe3ece2",
+      "before_commit": "363a5328f4b0517e59572118ccfb7c626d81dca9",
+      "description": "bpf verifier array reallocation leak fix",
+      "git_diff_sha256": "915cb30bd78066c40b00d88723cb2d3ec45d7ccb1e9763f9f697f44ac4ab6e53",
+      "patch_asset": "5819887bc07fc949581b103452378507500bf771566bb533f4a9a7d959fa9a6f",
+      "patch_url": "https://github.com/torvalds/linux/commit/42378a9ca55347102bbf86708776061d8fe3ece2",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "42378a9ca553"
+    },
+    {
+      "after_commit": "f89672cc3681952f2d06314981a6b45f8b0045d1",
+      "before_commit": "ae6062c4abdbf44c9cbae95805180e2fa1442b57",
+      "description": "copy_from_user count-check fix",
+      "git_diff_sha256": "cfab0a0f4588c1ccaacd005d166f1a2e1b990240010ee603606085c481f4c554",
+      "patch_asset": "a1497bc64776ecc50969d58019f38d10f3937261a6cec7842435ed9a5a8236de",
+      "patch_url": "https://github.com/torvalds/linux/commit/f89672cc3681952f2d06314981a6b45f8b0045d1",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "f89672cc3681"
+    },
+    {
+      "after_commit": "f0a4bc38a12f5a0cc5ad68670d9480e91e6a94df",
+      "before_commit": "bc055a50a8594a634e09a7286601d0d2bd51c734",
+      "description": "devm-managed clock acquisition fix",
+      "git_diff_sha256": "2ad878db755d124dc40ffbc3de10dc9d2c6dcd6c43959b6796bcfbdd9bccaafe",
+      "patch_asset": "dff18b4b51b7bd8bdf813c77b3c06d8e3000c68b108f2fb27e94c32230ef773a",
+      "patch_url": "https://github.com/torvalds/linux/commit/f0a4bc38a12f5a0cc5ad68670d9480e91e6a94df",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "f0a4bc38a12f"
+    },
+    {
+      "after_commit": "c158cf914713efc3bcdc25680c7156c48c12ef6a",
+      "before_commit": "79ac4c1443eaec0d09355307043a9149287f23c1",
+      "description": "intel-sdw-acpi child-node reference handling fix",
+      "git_diff_sha256": "fb630691153410336ce0489b6337c17c671bdf0a2f8155fdcd0851137f454f8e",
+      "patch_asset": "ec7feac60ae28936245151f479128334f53ba4443a1d947ad65ca49bfd911885",
+      "patch_url": "https://github.com/torvalds/linux/commit/c158cf914713efc3bcdc25680c7156c48c12ef6a",
+      "repository": "https://github.com/torvalds/linux",
+      "seed_id": "c158cf914713"
+    }
+  ]
+}

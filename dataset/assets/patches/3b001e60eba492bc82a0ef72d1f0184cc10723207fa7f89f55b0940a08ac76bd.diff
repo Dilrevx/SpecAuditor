@@ -1,0 +1,16 @@
+diff --git a/drivers/net/dsa/bcm_sf2.c b/drivers/net/dsa/bcm_sf2.c
+index ed1e6560df..0e663ec0c1 100644
+--- a/drivers/net/dsa/bcm_sf2.c
++++ b/drivers/net/dsa/bcm_sf2.c
+@@ -675,8 +675,10 @@ static int bcm_sf2_mdio_register(struct dsa_switch *ds)
+ 			of_remove_property(child, prop);
+ 
+ 		phydev = of_phy_find_device(child);
+-		if (phydev)
++		if (phydev) {
+ 			phy_device_remove(phydev);
++			phy_device_free(phydev);
++		}
+ 	}
+ 
+ 	err = mdiobus_register(priv->user_mii_bus);

@@ -1,3 +1,0 @@
-Enum: enum media_request_state
-
-media request state

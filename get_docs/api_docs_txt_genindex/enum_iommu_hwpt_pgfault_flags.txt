@@ -1,3 +1,0 @@
-Enum: enum iommu_hwpt_pgfault_flags
-
-flags for struct iommu_hwpt_pgfault

@@ -1,3 +1,0 @@
-Function: enum drm_i915_gem_memory_class
-
-Supported memory classes

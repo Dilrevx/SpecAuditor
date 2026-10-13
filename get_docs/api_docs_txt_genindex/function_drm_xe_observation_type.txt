@@ -1,3 +1,0 @@
-Function: enum drm_xe_observation_type
-
-Observation stream types

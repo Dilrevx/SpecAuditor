@@ -1,3 +1,0 @@
-Enum: enum ssam_controller_state
-
-State values for struct ssam_controller .

@@ -1,3 +1,0 @@
-Enum: enum ethtool_module_power_mode_policy
-
-plug-in module power mode policy

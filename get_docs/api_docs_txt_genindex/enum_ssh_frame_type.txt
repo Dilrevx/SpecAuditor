@@ -1,3 +1,0 @@
-Enum: enum ssh_frame_type
-
-Frame types for SSH frames.

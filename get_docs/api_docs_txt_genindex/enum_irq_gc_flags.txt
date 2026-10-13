@@ -1,3 +1,0 @@
-Enum: enum irq_gc_flags
-
-Initialization flags for generic irq chips

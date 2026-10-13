@@ -1,3 +1,0 @@
-Enum: enum vfl_devnode_direction
-
-Identifies if a struct video_device corresponds to a receiver, a transmitter or a mem-to-mem device.

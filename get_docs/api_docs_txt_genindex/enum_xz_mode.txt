@@ -1,3 +1,0 @@
-Enum: enum xz_mode
-
-Operation mode

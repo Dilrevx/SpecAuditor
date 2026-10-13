@@ -1,3 +1,0 @@
-Function: enum bus_notifier_event
-
-Bus Notifier events that have happened

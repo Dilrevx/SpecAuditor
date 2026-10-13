@@ -1,0 +1,13 @@
+diff --git a/sound/hda/intel-sdw-acpi.c b/sound/hda/intel-sdw-acpi.c
+index 5f60658c60..d7417a4039 100644
+--- a/sound/hda/intel-sdw-acpi.c
++++ b/sound/hda/intel-sdw-acpi.c
+@@ -45,6 +45,8 @@ static bool is_link_enabled(struct fwnode_handle *fw_node, u8 idx)
+ 				 "intel-quirk-mask",
+ 				 &quirk_mask);
+ 
++	fwnode_handle_put(link);
++
+ 	if (quirk_mask & SDW_INTEL_QUIRK_MASK_BUS_DISABLE)
+ 		return false;
+ 

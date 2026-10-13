@@ -1,3 +1,0 @@
-Enum: enum memblock_flags
-
-definition of memory region attributes

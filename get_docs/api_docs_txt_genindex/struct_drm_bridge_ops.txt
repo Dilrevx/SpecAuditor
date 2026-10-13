@@ -1,3 +1,0 @@
-Struct: enum drm_bridge_ops
-
-Bitmask of operations supported by the bridge

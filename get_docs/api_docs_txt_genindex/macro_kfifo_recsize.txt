@@ -1,7 +1,0 @@
-Macro: kfifo_recsize
-
-
-
-Parameters
-  fifo
-    address of the fifo to be used

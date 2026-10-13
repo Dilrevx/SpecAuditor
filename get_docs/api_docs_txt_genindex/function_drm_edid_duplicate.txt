@@ -1,7 +1,0 @@
-Function: struct edid * drm_edid_duplicate ( const struct edid * edid )
-
-duplicate an EDID and the extensions
-
-Parameters
-  const struct edid *edid
-    EDID to duplicate

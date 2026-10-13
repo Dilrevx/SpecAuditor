@@ -1,3 +1,0 @@
-Enum: enum ieee80211_smps_mode
-
-spatial multiplexing power save mode

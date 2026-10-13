@@ -1,0 +1,13 @@
+diff --git a/sound/core/memalloc.c b/sound/core/memalloc.c
+index 13b71069ae..b3853583d2 100644
+--- a/sound/core/memalloc.c
++++ b/sound/core/memalloc.c
+@@ -505,7 +505,7 @@ static void *snd_dma_wc_alloc(struct snd_dma_buffer *dmab, size_t size)
+ 	if (!p)
+ 		return NULL;
+ 	dmab->addr = dma_map_single(dmab->dev.dev, p, size, DMA_BIDIRECTIONAL);
+-	if (dmab->addr == DMA_MAPPING_ERROR) {
++	if (dma_mapping_error(dmab->dev.dev, dmab->addr)) {
+ 		do_free_pages(dmab->area, size, true);
+ 		return NULL;
+ 	}

@@ -1,7 +1,0 @@
-Function: bool xa_is_value ( const void * entry )
-
-Determine if an entry is a value.
-
-Parameters
-  const void *entry
-    XArray entry.

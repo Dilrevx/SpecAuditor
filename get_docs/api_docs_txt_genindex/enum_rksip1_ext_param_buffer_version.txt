@@ -1,3 +1,0 @@
-Enum: enum rksip1_ext_param_buffer_version
-
-RkISP1 extensible parameters version

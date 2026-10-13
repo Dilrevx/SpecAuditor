@@ -1,3 +1,0 @@
-Enum: enum mem_type
-
-memory types. For a more detailed reference, please see http://en.wikipedia.org/wiki/DRAM

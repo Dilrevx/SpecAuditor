@@ -1,2 +1,0 @@
-Function: void * cec_get_drvdata ( const struct cec_adapter * adap ) ;
-

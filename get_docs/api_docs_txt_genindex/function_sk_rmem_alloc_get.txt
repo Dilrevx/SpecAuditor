@@ -1,7 +1,0 @@
-Function: int sk_rmem_alloc_get ( const struct sock * sk )
-
-returns read allocations
-
-Parameters
-  const struct sock *sk
-    socket

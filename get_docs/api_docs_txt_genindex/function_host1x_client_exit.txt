@@ -1,7 +1,0 @@
-Function: void host1x_client_exit ( struct host1x_client * client )
-
-uninitialize a host1x client
-
-Parameters
-  struct host1x_client *client
-    host1x client

@@ -1,3 +1,0 @@
-Enum: enum dim_tune_state
-
-DIM algorithm tune states

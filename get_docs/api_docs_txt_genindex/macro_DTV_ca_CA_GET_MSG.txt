@@ -1,2 +1,0 @@
-Macro: CA_GET_MSG
-

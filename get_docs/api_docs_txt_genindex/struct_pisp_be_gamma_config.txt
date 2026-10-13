@@ -1,7 +1,0 @@
-Struct: struct pisp_be_gamma_config
-
-PiSP Back End Gamma configuration
-
-Members
-  lut
-    Gamma curve look-up table

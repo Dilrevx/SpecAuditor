@@ -1,2 +1,0 @@
-Macro: FE_DISEQC_SEND_BURST
-

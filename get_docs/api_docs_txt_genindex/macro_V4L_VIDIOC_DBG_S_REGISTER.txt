@@ -1,2 +1,0 @@
-Macro: VIDIOC_DBG_S_REGISTER
-

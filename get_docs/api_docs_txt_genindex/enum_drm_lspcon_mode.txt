@@ -1,2 +1,0 @@
-Enum: enum drm_lspcon_mode
-

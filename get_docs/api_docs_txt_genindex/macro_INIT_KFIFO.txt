@@ -1,7 +1,0 @@
-Macro: INIT_KFIFO
-
-
-
-Parameters
-  fifo
-    name of the declared fifo datatype

@@ -1,9 +1,0 @@
-Function: struct host1x_bo_cache
-
-host1x buffer object cache
-
-Members
-  mappings
-    list of mappings
-  lock
-    synchronizes accesses to the list of mappings

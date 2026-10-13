@@ -1,7 +1,0 @@
-Function: void intel_audio_deinit ( struct intel_display * display )
-
-deinitialize the audio driver
-
-Parameters
-  struct intel_display *display
-    display device

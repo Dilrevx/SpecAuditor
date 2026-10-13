@@ -1,7 +1,0 @@
-Function: int pcs_enable ( struct phylink_pcs * pcs )
-
-enable the PCS.
-
-Parameters
-  struct phylink_pcs *pcs
-    a pointer to a struct phylink_pcs .

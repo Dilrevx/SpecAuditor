@@ -1,2 +1,0 @@
-Function: int file_mprotect ( struct vm_area_struct * vma , unsigned long reqprot , unsigned long prot ) ;
-

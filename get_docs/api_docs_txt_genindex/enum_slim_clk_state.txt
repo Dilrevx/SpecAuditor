@@ -1,3 +1,0 @@
-Enum: enum slim_clk_state
-
-SLIMbus controller’s clock state used internally for maintaining current clock state.

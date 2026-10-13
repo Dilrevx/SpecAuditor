@@ -1,3 +1,0 @@
-Enum: enum xsdfec_code
-
-Code Type.

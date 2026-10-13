@@ -1,7 +1,0 @@
-Macro: hlist_nulls_first_rcu
-
-
-
-Parameters
-  head
-    the head of the list.

@@ -1,2 +1,0 @@
-Macro: VIDIOC_G_CROP
-

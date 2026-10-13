@@ -1,3 +1,0 @@
-Enum: enum wiphy_flags
-
-wiphy capability flags

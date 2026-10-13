@@ -1,7 +1,0 @@
-Function: void xprt_put ( struct rpc_xprt * xprt )
-
-release a reference to an RPC transport.
-
-Parameters
-  struct rpc_xprt *xprt
-    pointer to the transport

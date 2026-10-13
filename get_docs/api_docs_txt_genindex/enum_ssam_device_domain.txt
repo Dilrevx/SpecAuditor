@@ -1,3 +1,0 @@
-Enum: enum ssam_device_domain
-
-SAM device domain.

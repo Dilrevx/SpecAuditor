@@ -1,3 +1,0 @@
-Enum: enum ssam_ssh_tid
-
-Target/source IDs for Serial Hub messages.

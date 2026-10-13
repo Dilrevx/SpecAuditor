@@ -1,3 +1,0 @@
-Enum: enum dp_colorimetry
-
-drm DP Colorimetry formats

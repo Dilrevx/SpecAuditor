@@ -1,7 +1,0 @@
-Macro: for_each_mem_region
-
-
-
-Parameters
-  region
-    loop variable

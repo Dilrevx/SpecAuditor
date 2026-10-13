@@ -1,9 +1,0 @@
-Function: struct ccw_dev_id
-
-unique identifier for ccw devices
-
-Members
-  ssid
-    subchannel set id
-  devno
-    device number

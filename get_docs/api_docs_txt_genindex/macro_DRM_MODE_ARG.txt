@@ -1,7 +1,0 @@
-Macro: DRM_MODE_ARG
-
-
-
-Parameters
-  m
-    display mode

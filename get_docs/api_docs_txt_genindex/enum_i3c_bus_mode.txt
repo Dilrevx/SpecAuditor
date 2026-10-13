@@ -1,3 +1,0 @@
-Enum: enum i3c_bus_mode
-
-I3C bus mode

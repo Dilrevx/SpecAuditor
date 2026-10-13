@@ -1,2 +1,0 @@
-Function: ktime_t ktime_get_coarse ( void )
-

@@ -1,2 +1,0 @@
-Macro: LIRC_GET_REC_MODE
-

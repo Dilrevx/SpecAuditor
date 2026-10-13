@@ -1,7 +1,0 @@
-Function: struct ipu3_uapi_bnr_static_config_lut_config
-
-BNR square root lookup table
-
-Members
-  values
-    pre-calculated values of square root function.

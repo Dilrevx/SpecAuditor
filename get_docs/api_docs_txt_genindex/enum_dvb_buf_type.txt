@@ -1,3 +1,0 @@
-Enum: enum dvb_buf_type
-
-types of Digital TV memory-mapped buffers

@@ -1,3 +1,0 @@
-Enum: enum fe_caps
-
-Frontend capabilities

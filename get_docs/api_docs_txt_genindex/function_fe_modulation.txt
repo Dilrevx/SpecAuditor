@@ -1,3 +1,0 @@
-Function: enum fe_modulation
-
-Type of modulation/constellation

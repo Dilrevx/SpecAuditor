@@ -1,0 +1,20 @@
+diff --git a/drivers/thermal/intel/int340x_thermal/processor_thermal_device_pci.c b/drivers/thermal/intel/int340x_thermal/processor_thermal_device_pci.c
+index 0066149218..ba5d36d36f 100644
+--- a/drivers/thermal/intel/int340x_thermal/processor_thermal_device_pci.c
++++ b/drivers/thermal/intel/int340x_thermal/processor_thermal_device_pci.c
+@@ -416,7 +416,6 @@ static int proc_thermal_pci_probe(struct pci_dev *pdev, const struct pci_device_
+ 	if (!pci_info->no_legacy)
+ 		proc_thermal_remove(proc_priv);
+ 	proc_thermal_mmio_remove(pdev, proc_priv);
+-	pci_disable_device(pdev);
+ 
+ 	return ret;
+ }
+@@ -438,7 +437,6 @@ static void proc_thermal_pci_remove(struct pci_dev *pdev)
+ 	proc_thermal_mmio_remove(pdev, pci_info->proc_priv);
+ 	if (!pci_info->no_legacy)
+ 		proc_thermal_remove(proc_priv);
+-	pci_disable_device(pdev);
+ }
+ 
+ #ifdef CONFIG_PM_SLEEP

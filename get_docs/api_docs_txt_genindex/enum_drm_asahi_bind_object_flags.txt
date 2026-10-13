@@ -1,3 +1,0 @@
-Enum: enum drm_asahi_bind_object_flags
-
-Special object bind flags

@@ -1,3 +1,0 @@
-Enum: enum w1_netlink_message_types
-
-message type

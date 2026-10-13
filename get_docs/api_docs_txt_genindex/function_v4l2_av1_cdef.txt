@@ -1,2 +1,0 @@
-Function: type v4l2_av1_cdef
-

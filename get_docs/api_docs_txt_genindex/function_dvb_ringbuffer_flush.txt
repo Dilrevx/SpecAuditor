@@ -1,7 +1,0 @@
-Function: void dvb_ringbuffer_flush ( struct dvb_ringbuffer * rbuf )
-
-flush buffer
-
-Parameters
-  struct dvb_ringbuffer *rbuf
-    pointer to struct dvb_ringbuffer

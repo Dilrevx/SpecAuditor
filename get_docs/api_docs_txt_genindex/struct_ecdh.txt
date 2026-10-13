@@ -1,9 +1,0 @@
-Struct: struct ecdh
-
-define an ECDH private key
-
-Members
-  key
-    Private ECDH key
-  key_size
-    Size of the private ECDH key

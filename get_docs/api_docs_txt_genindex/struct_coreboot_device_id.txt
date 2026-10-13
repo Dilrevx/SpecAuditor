@@ -1,9 +1,0 @@
-Struct: struct coreboot_device_id
-
-Identifies a coreboot table entry
-
-Members
-  tag
-    tag ID
-  driver_data
-    driver specific data

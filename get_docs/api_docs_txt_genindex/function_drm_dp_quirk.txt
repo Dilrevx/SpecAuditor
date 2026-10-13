@@ -1,3 +1,0 @@
-Function: enum drm_dp_quirk
-
-Display Port sink/branch device specific quirks

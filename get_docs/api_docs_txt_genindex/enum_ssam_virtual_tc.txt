@@ -1,3 +1,0 @@
-Enum: enum ssam_virtual_tc
-
-Target categories for the virtual SAM domain.

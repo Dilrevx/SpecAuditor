@@ -1,2 +1,0 @@
-Type: type cec_drm_connector_info
-

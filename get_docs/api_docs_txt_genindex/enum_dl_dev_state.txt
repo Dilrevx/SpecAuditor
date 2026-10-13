@@ -1,3 +1,0 @@
-Enum: enum dl_dev_state
-
-Device driver presence tracking information.

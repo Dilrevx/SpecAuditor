@@ -1,2 +1,0 @@
-Macro: CEC_ADAP_G_CAPS
-

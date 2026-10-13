@@ -1,3 +1,0 @@
-Enum: enum tveeprom_audio_processor
-
-Specifies the type of audio processor used on a Hauppauge device.

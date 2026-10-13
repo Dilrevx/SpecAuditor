@@ -1,7 +1,0 @@
-Function: void nvmem_cell_put ( struct nvmem_cell * cell )
-
-Release previously allocated nvmem cell.
-
-Parameters
-  struct nvmem_cell *cell
-    Previously allocated nvmem cell by nvmem_cell_get() .

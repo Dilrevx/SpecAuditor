@@ -1,3 +1,0 @@
-Enum: enum sock_type
-
-Socket types

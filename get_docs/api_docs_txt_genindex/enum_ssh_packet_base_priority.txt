@@ -1,3 +1,0 @@
-Enum: enum ssh_packet_base_priority
-
-Base priorities for struct ssh_packet .

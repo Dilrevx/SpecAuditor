@@ -1,3 +1,0 @@
-Enum: enum iommu_veventq_type
-
-Virtual Event Queue Type

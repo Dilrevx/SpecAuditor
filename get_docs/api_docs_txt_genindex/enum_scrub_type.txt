@@ -1,3 +1,0 @@
-Enum: enum scrub_type
-
-scrubbing capabilities

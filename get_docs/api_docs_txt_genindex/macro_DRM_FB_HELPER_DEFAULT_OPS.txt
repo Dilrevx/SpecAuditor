@@ -1,7 +1,0 @@
-Macro: DRM_FB_HELPER_DEFAULT_OPS
-
-
-
-Parameters
-  struct fb_info *info
-    fbdev registered by the helper

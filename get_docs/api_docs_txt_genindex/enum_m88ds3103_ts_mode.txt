@@ -1,3 +1,0 @@
-Enum: enum m88ds3103_ts_mode
-
-TS connection mode

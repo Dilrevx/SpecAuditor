@@ -1,2 +1,0 @@
-Enum: enum m88ds3103_clock_out
-

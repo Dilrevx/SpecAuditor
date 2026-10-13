@@ -1,7 +1,0 @@
-Function: void drm_dp_aux_unregister ( struct drm_dp_aux * aux )
-
-unregister an AUX adapter
-
-Parameters
-  struct drm_dp_aux *aux
-    DisplayPort AUX channel

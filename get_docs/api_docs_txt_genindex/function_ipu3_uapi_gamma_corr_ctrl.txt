@@ -1,9 +1,0 @@
-Function: struct ipu3_uapi_gamma_corr_ctrl
-
-Gamma correction
-
-Members
-  enable
-    gamma correction enable.
-  reserved
-    reserved

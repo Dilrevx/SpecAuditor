@@ -1,7 +1,0 @@
-Macro: SEQCNT_ZERO
-
-
-
-Parameters
-  name
-    Name of the seqcount_t instance

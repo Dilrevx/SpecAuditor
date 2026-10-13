@@ -1,3 +1,0 @@
-Enum: enum ethtool_mm_verify_status
-
-status of MAC Merge Verify function

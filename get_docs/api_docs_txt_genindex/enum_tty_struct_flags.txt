@@ -1,3 +1,0 @@
-Enum: enum tty_struct_flags
-
-TTY Struct Flags

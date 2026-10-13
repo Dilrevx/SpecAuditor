@@ -1,9 +1,0 @@
-Struct: struct drm_xe_engine
-
-describe hardware engine
-
-Members
-  instance
-    The drm_xe_engine_class_instance
-  reserved
-    Reserved

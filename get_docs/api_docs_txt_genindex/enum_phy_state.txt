@@ -1,3 +1,0 @@
-Enum: enum phy_state
-
-PHY state machine states:

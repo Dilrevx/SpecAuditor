@@ -1,3 +1,0 @@
-Enum: enum w1_master_flags
-
-bitfields used in w1_master.flags

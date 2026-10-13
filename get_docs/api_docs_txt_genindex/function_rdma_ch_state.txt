@@ -1,3 +1,0 @@
-Function: enum rdma_ch_state
-
-SRP channel state

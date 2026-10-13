@@ -1,2 +1,0 @@
-Type: type media_link_desc
-

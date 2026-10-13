@@ -1,3 +1,0 @@
-Enum: enum fe_pilot
-
-Type of pilot tone

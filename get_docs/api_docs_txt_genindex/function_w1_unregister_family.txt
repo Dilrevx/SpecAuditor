@@ -1,7 +1,0 @@
-Function: void w1_unregister_family ( struct w1_family * fent )
-
-unregister a device family driver
-
-Parameters
-  struct w1_family *fent
-    family to unregister

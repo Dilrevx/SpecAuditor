@@ -1,2 +1,0 @@
-Type: type v4l2_stateless_h264_start_code
-

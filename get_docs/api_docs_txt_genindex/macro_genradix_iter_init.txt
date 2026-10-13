@@ -1,9 +1,0 @@
-Macro: genradix_iter_init
-
-
-
-Parameters
-  _radix
-    genradix that will be iterated over
-  _idx
-    index to start iterating from

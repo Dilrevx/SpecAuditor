@@ -1,7 +1,0 @@
-Function: struct device_node * of_irq_find_parent ( struct device_node * child )
-
-Given a device node, find its interrupt parent node
-
-Parameters
-  struct device_node *child
-    pointer to device node

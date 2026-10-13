@@ -1,3 +1,0 @@
-Enum: enum ssam_event_notifier_flags
-
-Flags for event notifiers.

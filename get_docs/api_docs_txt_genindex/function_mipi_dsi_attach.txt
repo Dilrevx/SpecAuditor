@@ -1,7 +1,0 @@
-Function: int mipi_dsi_attach ( struct mipi_dsi_device * dsi )
-
-attach a DSI device to its DSI host
-
-Parameters
-  struct mipi_dsi_device *dsi
-    DSI peripheral

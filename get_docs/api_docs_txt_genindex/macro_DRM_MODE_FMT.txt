@@ -1,7 +1,0 @@
-Macro: DRM_MODE_FMT
-
-
-
-Parameters
-  m
-    display mode

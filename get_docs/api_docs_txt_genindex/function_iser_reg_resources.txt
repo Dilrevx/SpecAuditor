@@ -1,9 +1,0 @@
-Function: struct iser_reg_resources
-
-Fast registration resources
-
-Members
-  mr
-    memory region
-  sig_mr
-    signature memory region

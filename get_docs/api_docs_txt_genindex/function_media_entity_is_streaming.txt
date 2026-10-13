@@ -1,7 +1,0 @@
-Function: bool media_entity_is_streaming ( const struct media_entity * entity )
-
-Test if an entity is part of a streaming pipeline
-
-Parameters
-  const struct media_entity *entity
-    The entity

@@ -1,3 +1,0 @@
-Enum: enum dvb_dmx_state
-
-state machine for a demux filter.

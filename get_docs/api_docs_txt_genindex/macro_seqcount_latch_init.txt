@@ -1,7 +1,0 @@
-Macro: seqcount_latch_init
-
-
-
-Parameters
-  s
-    Pointer to the seqcount_latch_t instance

@@ -1,2 +1,0 @@
-Type: type v4l2_dv_timings_cap
-

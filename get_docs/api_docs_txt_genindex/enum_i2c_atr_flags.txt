@@ -1,3 +1,0 @@
-Enum: enum i2c_atr_flags
-
-Flags for an I2C ATR driver

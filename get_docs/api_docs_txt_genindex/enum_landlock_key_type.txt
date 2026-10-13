@@ -1,3 +1,0 @@
-Enum: enum landlock_key_type
-
-Type of union landlock_key

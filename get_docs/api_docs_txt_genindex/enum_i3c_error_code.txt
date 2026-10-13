@@ -1,3 +1,0 @@
-Enum: enum i3c_error_code
-
-I3C error codes

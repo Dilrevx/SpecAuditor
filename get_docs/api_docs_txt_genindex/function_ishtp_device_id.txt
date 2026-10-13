@@ -1,9 +1,0 @@
-Function: struct ishtp_device_id
-
-ISHTP device identifier
-
-Members
-  guid
-    GUID of the device.
-  driver_data
-    pointer to driver specific data

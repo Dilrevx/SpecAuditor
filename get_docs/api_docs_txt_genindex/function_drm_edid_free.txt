@@ -1,7 +1,0 @@
-Function: void drm_edid_free ( const struct drm_edid * drm_edid )
-
-Free the drm_edid container
-
-Parameters
-  const struct drm_edid *drm_edid
-    EDID to free

@@ -1,7 +1,0 @@
-Macro: delayed_work_pending
-
-
-
-Parameters
-  w
-    The work item in question

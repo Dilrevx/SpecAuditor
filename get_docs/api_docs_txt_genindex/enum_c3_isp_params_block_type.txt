@@ -1,3 +1,0 @@
-Enum: enum c3_isp_params_block_type
-
-Enumeration of C3 ISP parameter blocks

@@ -1,3 +1,0 @@
-Enum: enum dim_cq_period_mode
-
-Modes for CQ period count

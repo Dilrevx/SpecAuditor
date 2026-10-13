@@ -1,3 +1,0 @@
-Enum: enum iommu_hw_info_type
-
-IOMMU Hardware Info Types

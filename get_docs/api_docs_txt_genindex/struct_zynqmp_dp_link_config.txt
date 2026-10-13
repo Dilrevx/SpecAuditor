@@ -1,9 +1,0 @@
-Struct: struct zynqmp_dp_link_config
-
-Common link config between source and sink
-
-Members
-  max_rate
-    maximum link rate
-  max_lanes
-    maximum number of lanes

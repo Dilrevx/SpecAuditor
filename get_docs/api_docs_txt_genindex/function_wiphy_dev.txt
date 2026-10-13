@@ -1,7 +1,0 @@
-Function: struct device * wiphy_dev ( struct wiphy * wiphy )
-
-get wiphy dev pointer
-
-Parameters
-  struct wiphy *wiphy
-    The wiphy whose device struct to look up

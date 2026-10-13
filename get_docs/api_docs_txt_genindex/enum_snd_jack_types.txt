@@ -1,3 +1,0 @@
-Enum: enum snd_jack_types
-
-Jack types which can be reported

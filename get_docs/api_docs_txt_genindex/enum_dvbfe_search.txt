@@ -1,3 +1,0 @@
-Enum: enum dvbfe_search
-
-search callback possible return status

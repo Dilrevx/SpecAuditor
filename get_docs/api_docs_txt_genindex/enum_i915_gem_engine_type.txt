@@ -1,3 +1,0 @@
-Enum: enum i915_gem_engine_type
-
-Describes the type of an i915_gem_proto_engine

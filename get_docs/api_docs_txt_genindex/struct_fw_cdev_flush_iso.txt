@@ -1,7 +1,0 @@
-Struct: struct fw_cdev_flush_iso
-
-flush completed iso packets
-
-Members
-  handle
-    handle of isochronous context to flush

@@ -1,3 +1,0 @@
-Enum: enum sock_shutdown_cmd
-
-Shutdown types

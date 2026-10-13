@@ -1,3 +1,0 @@
-Enum: enum cfg80211_signal_type
-
-signal type

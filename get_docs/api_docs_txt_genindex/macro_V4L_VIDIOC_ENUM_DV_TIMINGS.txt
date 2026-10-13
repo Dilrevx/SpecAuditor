@@ -1,2 +1,0 @@
-Macro: VIDIOC_ENUM_DV_TIMINGS
-

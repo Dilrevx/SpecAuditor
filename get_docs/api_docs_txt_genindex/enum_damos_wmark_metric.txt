@@ -1,3 +1,0 @@
-Enum: enum damos_wmark_metric
-
-Represents the watermark metric.

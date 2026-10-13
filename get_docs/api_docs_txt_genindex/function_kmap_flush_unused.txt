@@ -1,7 +1,0 @@
-Function: void kmap_flush_unused ( void )
-
-Flush all unused kmap mappings in order to remove stray mappings
-
-Parameters
-  void
-    no arguments

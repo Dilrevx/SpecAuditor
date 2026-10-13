@@ -1,7 +1,0 @@
-Function: void noinstr generic_handle_arch_irq ( struct pt_regs * regs )
-
-root irq handler for architectures which do no entry accounting themselves
-
-Parameters
-  struct pt_regs *regs
-    Register file coming from the low-level handling code

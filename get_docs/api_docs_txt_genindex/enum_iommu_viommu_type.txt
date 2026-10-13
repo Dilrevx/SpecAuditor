@@ -1,3 +1,0 @@
-Enum: enum iommu_viommu_type
-
-Virtual IOMMU Type

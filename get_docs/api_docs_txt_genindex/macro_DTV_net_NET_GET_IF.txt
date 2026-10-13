@@ -1,2 +1,0 @@
-Macro: NET_GET_IF
-

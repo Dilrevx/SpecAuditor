@@ -1,7 +1,0 @@
-Function: bool pci_msi_enabled ( void )
-
-Are MSI(-X) interrupts enabled system-wide?
-
-Parameters
-  void
-    no arguments

@@ -1,3 +1,0 @@
-Enum: enum v4l2_fwnode_bus_type
-
-Video bus types defined by firmware properties

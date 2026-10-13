@@ -1,3 +1,0 @@
-Function: enum media_entity_type
-
-Media entity type

@@ -1,3 +1,0 @@
-Enum: enum i2c_driver_flags
-
-Flags for an I2C device driver

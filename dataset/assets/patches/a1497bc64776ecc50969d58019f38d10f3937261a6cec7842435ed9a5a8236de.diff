@@ -1,0 +1,13 @@
+diff --git a/drivers/remoteproc/remoteproc_debugfs.c b/drivers/remoteproc/remoteproc_debugfs.c
+index b5a1e3b697..581930483e 100644
+--- a/drivers/remoteproc/remoteproc_debugfs.c
++++ b/drivers/remoteproc/remoteproc_debugfs.c
+@@ -76,7 +76,7 @@ static ssize_t rproc_coredump_write(struct file *filp,
+ 	int ret, err = 0;
+ 	char buf[20];
+ 
+-	if (count > sizeof(buf))
++	if (count < 1 || count > sizeof(buf))
+ 		return -EINVAL;
+ 
+ 	ret = copy_from_user(buf, user_buf, count);

@@ -1,3 +1,0 @@
-Enum: enum slim_channel_state
-
-SLIMbus channel state machine used by core.

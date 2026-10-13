@@ -1,2 +1,0 @@
-Macro: VIDIOC_S_FBUF
-

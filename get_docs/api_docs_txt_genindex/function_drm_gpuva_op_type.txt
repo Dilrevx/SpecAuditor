@@ -1,3 +1,0 @@
-Function: enum drm_gpuva_op_type
-
-GPU VA operation type

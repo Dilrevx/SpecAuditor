@@ -1,3 +1,0 @@
-Enum: enum slim_device_status
-
-slim device status

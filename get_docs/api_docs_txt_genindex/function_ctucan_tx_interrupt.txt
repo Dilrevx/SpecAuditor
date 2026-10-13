@@ -1,7 +1,0 @@
-Function: void ctucan_tx_interrupt ( struct net_device * ndev )
-
-Tx done Isr
-
-Parameters
-  struct net_device *ndev
-    net_device pointer

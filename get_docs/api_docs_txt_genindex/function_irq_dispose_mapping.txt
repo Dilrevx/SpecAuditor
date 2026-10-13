@@ -1,7 +1,0 @@
-Function: void irq_dispose_mapping ( unsigned int virq )
-
-Unmap an interrupt
-
-Parameters
-  unsigned int virq
-    linux irq number of the interrupt to unmap

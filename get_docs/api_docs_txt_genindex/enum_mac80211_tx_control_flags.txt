@@ -1,3 +1,0 @@
-Enum: enum mac80211_tx_control_flags
-
-flags to describe transmit control

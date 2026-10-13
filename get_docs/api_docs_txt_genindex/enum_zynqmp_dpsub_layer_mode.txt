@@ -1,3 +1,0 @@
-Enum: enum zynqmp_dpsub_layer_mode
-
-Layer mode

@@ -1,3 +1,0 @@
-Enum: enum xsdfec_turbo_alg
-
-Turbo Algorithm Type.

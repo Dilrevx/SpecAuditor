@@ -1,3 +1,0 @@
-Enum: enum vb2_io_modes
-
-queue access methods.

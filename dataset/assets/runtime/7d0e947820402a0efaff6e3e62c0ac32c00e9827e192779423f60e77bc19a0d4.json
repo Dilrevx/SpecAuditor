@@ -1,0 +1,113 @@
+{
+  "schema": "specauditor-specification-portfolio-v1",
+  "specifications": [
+    {
+      "predicate": "The return value must be checked for error before proceeding.",
+      "spec_id": "specauditor-spec-4596836d899cfb719436",
+      "target_description": "A call to function usbnet_get_endpoints",
+      "target_entity": "usbnet_get_endpoints"
+    },
+    {
+      "predicate": "The returned device reference must be released with put_device() when the device is no longer needed, before all possible exit paths from the calling function",
+      "spec_id": "specauditor-spec-4578961e0c1986c0228d",
+      "target_description": "A call to bus_find_device_by_name() that returns a device reference",
+      "target_entity": "bus_find_device_by_name"
+    },
+    {
+      "predicate": "The device reference must be released with put_device() when the device is no longer needed, before all possible exit paths from the function",
+      "spec_id": "specauditor-spec-514feed2c3ed4b063c64",
+      "target_description": "A call to driver_find_device_by_of_node() that acquires a reference to a device object",
+      "target_entity": "driver_find_device_by_of_node"
+    },
+    {
+      "predicate": "The reference must be released with put_device if the device is no longer needed.",
+      "spec_id": "specauditor-spec-0a569e7d211f5a2247d6",
+      "target_description": "A call to function of_find_device_by_node",
+      "target_entity": "of_find_device_by_node"
+    },
+    {
+      "predicate": "The original allocation passed to krealloc must be freed with kfree before returning, if krealloc returns NULL",
+      "spec_id": "specauditor-spec-8a6419478969be4a0e63",
+      "target_description": "A call to krealloc that returns NULL (indicating allocation failure)",
+      "target_entity": "krealloc"
+    },
+    {
+      "predicate": "The old allocation must be freed with kfree if the new allocation fails.",
+      "spec_id": "specauditor-spec-ae2c1c003aba43c363eb",
+      "target_description": "A call to function krealloc_array",
+      "target_entity": "krealloc_array"
+    },
+    {
+      "predicate": "The original allocation (the first parameter to kvrealloc) must be freed before returning or taking error recovery actions, to prevent memory leaks.",
+      "spec_id": "specauditor-spec-c2886b8bcae796a7e795",
+      "target_description": "A call to kvrealloc that returns NULL, indicating reallocation failure",
+      "target_entity": "kvrealloc"
+    },
+    {
+      "predicate": "The pci_disable_device function must not be called if the device is already disabled.",
+      "spec_id": "specauditor-spec-e886fc73974ab7fb869e",
+      "target_description": "A call to function pci_disable_device",
+      "target_entity": "pci_disable_device"
+    },
+    {
+      "predicate": "The returned device node pointer must be released with of_node_put() when done to avoid refcount leak.",
+      "spec_id": "specauditor-spec-e64863f9414d15d47e2b",
+      "target_description": "A call to function of_parse_phandle that returns a device node pointer with incremented refcount.",
+      "target_entity": "of_parse_phandle"
+    },
+    {
+      "predicate": "The returned dentry must have dput() called on it to prevent memory leak, or debugfs_lookup_and_remove() should be used instead",
+      "spec_id": "specauditor-spec-39ede96ec4a1edeb5370",
+      "target_description": "A call to function debugfs_lookup that returns a dentry pointer",
+      "target_entity": "debugfs_lookup"
+    },
+    {
+      "predicate": "The returned fwnode pointer must be released with fwnode_handle_put.",
+      "spec_id": "specauditor-spec-33d7c5025b3ebfe8d5e9",
+      "target_description": "A call to function fwnode_get_named_child_node",
+      "target_entity": "fwnode_get_named_child_node"
+    },
+    {
+      "predicate": "The returned device_node pointer must be released with of_node_put() when no longer needed",
+      "spec_id": "specauditor-spec-e72d8b9ffc0888915ab8",
+      "target_description": "A call to of_graph_get_endpoint_by_regs()",
+      "target_entity": "of_graph_get_endpoint_by_regs"
+    },
+    {
+      "predicate": "The returned device_node pointer must be released with of_node_put() when no longer needed",
+      "spec_id": "specauditor-spec-ac278db09abd6568d79e",
+      "target_description": "A call to of_graph_get_remote_endpoint()",
+      "target_entity": "of_graph_get_remote_endpoint"
+    },
+    {
+      "predicate": "The returned slim_device reference must be released with the corresponding put function when no longer needed",
+      "spec_id": "specauditor-spec-1b9669ee743b9eeab1b9",
+      "target_description": "A call to of_slim_get_device()",
+      "target_entity": "of_slim_get_device"
+    },
+    {
+      "predicate": "When the returned pci_dev pointer is no longer needed, its reference count must be decremented by calling pci_dev_put()",
+      "spec_id": "specauditor-spec-245b6ca5e83fdcc89a18",
+      "target_description": "pci_get_device() function that returns a PCI device object",
+      "target_entity": "pci_get_device"
+    },
+    {
+      "predicate": "When the returned pci_dev pointer is no longer needed, its reference count must be decremented by calling pci_dev_put() to prevent memory leaks",
+      "spec_id": "specauditor-spec-2744afccfdaf3b406863",
+      "target_description": "Function pci_get_subsys that searches for and returns a reference to a PCI device",
+      "target_entity": "pci_get_subsys"
+    },
+    {
+      "predicate": "The len parameter must be validated to be within reasonable bounds (greater than or equal to 0 and less than a maximum safe allocation size) before performing allocation and copy operations to prevent integer overflow and excessive memory allocation",
+      "spec_id": "specauditor-spec-99de14aa3cfb70d752b2",
+      "target_description": "memdup_user_nul function that copies user data with size parameter len",
+      "target_entity": "memdup_user_nul"
+    },
+    {
+      "predicate": "The count parameter must be validated to be non-zero and the effective write size (count adjusted for position) must not exceed the available buffer space (available - pos) before performing the copy_from_user operation",
+      "spec_id": "specauditor-spec-3e1a2924f33c9ad86d52",
+      "target_description": "simple_write_to_buffer function that copies user data to a buffer with position and count parameters",
+      "target_entity": "simple_write_to_buffer"
+    }
+  ]
+}

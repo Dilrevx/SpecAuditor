@@ -1,3 +1,0 @@
-Function: void ktime_get_ts ( struct timespec * )
-
-Use ktime_get() or ktime_get_ts64() instead.

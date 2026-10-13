@@ -1,3 +1,0 @@
-Function: enum rkisp1_cif_isp_dpf_rb_filtersize
-
-Red and blue filter sizes

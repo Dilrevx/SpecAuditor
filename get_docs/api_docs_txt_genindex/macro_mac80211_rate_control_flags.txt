@@ -1,3 +1,0 @@
-Macro: enum mac80211_rate_control_flags
-
-per-rate flags set by the Rate Control algorithm.

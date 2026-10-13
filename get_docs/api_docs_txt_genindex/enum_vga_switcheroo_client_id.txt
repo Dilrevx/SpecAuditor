@@ -1,3 +1,0 @@
-Enum: enum vga_switcheroo_client_id
-
-client identifier

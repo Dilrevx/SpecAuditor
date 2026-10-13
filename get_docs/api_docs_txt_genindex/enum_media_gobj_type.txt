@@ -1,3 +1,0 @@
-Enum: enum media_gobj_type
-
-type of a graph object

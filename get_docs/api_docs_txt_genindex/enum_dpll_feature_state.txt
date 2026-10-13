@@ -1,3 +1,0 @@
-Enum: enum dpll_feature_state
-
-Allow control (enable/disable) and status checking over features.

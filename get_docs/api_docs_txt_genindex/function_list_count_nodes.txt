@@ -1,7 +1,0 @@
-Function: size_t list_count_nodes ( struct list_head * head )
-
-count nodes in the list
-
-Parameters
-  struct list_head *head
-    the head for your list.

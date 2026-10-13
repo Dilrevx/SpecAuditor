@@ -1,3 +1,0 @@
-Enum: enum freeze_holder
-
-holder of the freeze

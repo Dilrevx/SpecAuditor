@@ -1,2 +1,0 @@
-Struct: struct audio_status
-

@@ -1,3 +1,0 @@
-Macro: enum tty_driver_flag
-
-TTY Driver Flags

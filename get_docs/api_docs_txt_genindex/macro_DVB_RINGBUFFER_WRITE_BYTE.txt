@@ -1,9 +1,0 @@
-Macro: DVB_RINGBUFFER_WRITE_BYTE
-
-
-
-Parameters
-  rbuf
-    pointer to struct dvb_ringbuffer
-  byte
-    byte to write

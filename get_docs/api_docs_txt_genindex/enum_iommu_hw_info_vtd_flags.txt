@@ -1,3 +1,0 @@
-Enum: enum iommu_hw_info_vtd_flags
-
-Flags for VT-d hw_info

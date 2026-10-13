@@ -1,3 +1,0 @@
-Enum: enum intel_dpll_id
-
-possible DPLL ids

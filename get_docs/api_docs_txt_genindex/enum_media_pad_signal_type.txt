@@ -1,3 +1,0 @@
-Enum: enum media_pad_signal_type
-
-type of the signal inside a media pad

@@ -1,7 +1,0 @@
-Function: void hsi_unregister_controller ( struct hsi_controller * hsi )
-
-Unregister an HSI controller
-
-Parameters
-  struct hsi_controller *hsi
-    The HSI controller to register

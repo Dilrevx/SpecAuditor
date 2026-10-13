@@ -1,3 +1,0 @@
-Enum: enum backlight_update_reason
-
-what method was used to update backlight

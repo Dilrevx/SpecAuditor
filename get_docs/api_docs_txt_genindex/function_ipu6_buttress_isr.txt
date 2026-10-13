@@ -1,2 +1,0 @@
-Function: irqreturn_t ipu6_buttress_isr ( int irq , ... )
-

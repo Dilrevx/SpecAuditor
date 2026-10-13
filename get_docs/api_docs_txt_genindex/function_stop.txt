@@ -1,2 +1,0 @@
-Function: void stop ( struct ieee802154_hw * hw )
-

@@ -1,3 +1,0 @@
-Function: enum v4l2_i2c_tuner_type
-
-specifies the range of tuner address that should be used when seeking for I2C devices.

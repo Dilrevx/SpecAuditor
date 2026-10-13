@@ -1,2 +1,0 @@
-Function: int xmit_async ( struct ieee802154_hw * hw , struct sk_buff * skb )
-

@@ -1,3 +1,0 @@
-Enum: enum ieee80211_filter_flags
-
-hardware filter flags

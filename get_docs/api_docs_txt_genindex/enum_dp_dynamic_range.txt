@@ -1,3 +1,0 @@
-Enum: enum dp_dynamic_range
-
-drm DP Dynamic Range

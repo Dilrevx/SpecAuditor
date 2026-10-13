@@ -1,3 +1,0 @@
-Enum: enum vtpm_proxy_flags
-
-flags for the proxy TPM

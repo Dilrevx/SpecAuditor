@@ -1,7 +1,0 @@
-Macro: trace_puts
-
-
-
-Parameters
-  str
-    the string to record

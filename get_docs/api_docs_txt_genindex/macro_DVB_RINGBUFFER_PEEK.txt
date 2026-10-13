@@ -1,9 +1,0 @@
-Macro: DVB_RINGBUFFER_PEEK
-
-
-
-Parameters
-  rbuf
-    pointer to struct dvb_ringbuffer
-  offs
-    offset inside the ringbuffer

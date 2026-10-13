@@ -1,3 +1,0 @@
-Enum: enum survey_info_flags
-
-survey information flags

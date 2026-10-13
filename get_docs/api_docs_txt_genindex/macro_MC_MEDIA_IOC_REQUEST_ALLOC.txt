@@ -1,2 +1,0 @@
-Macro: MEDIA_IOC_REQUEST_ALLOC
-

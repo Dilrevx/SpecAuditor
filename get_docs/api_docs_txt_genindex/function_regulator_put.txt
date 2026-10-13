@@ -1,7 +1,0 @@
-Function: void regulator_put ( struct regulator * regulator )
-
-“free” the regulator source
-
-Parameters
-  struct regulator *regulator
-    regulator source

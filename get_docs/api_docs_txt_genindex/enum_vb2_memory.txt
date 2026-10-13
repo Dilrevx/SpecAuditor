@@ -1,3 +1,0 @@
-Enum: enum vb2_memory
-
-type of memory model used to make the buffers visible on userspace.

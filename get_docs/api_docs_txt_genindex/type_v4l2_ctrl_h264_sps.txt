@@ -1,2 +1,0 @@
-Type: type v4l2_ctrl_h264_sps
-

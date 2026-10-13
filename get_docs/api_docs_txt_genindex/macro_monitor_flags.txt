@@ -1,3 +1,0 @@
-Macro: enum monitor_flags
-
-monitor flags

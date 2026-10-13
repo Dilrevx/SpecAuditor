@@ -1,3 +1,0 @@
-Enum: enum hte_return
-
-HTE subsystem return values used during callback.

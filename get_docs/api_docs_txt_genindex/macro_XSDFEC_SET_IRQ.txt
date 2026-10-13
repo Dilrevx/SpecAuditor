@@ -1,2 +1,0 @@
-Macro: XSDFEC_SET_IRQ
-

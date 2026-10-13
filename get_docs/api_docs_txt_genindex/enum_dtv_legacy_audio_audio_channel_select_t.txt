@@ -1,2 +1,0 @@
-Enum: enum audio_channel_select_t
-

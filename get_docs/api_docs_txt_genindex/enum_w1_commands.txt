@@ -1,3 +1,0 @@
-Enum: enum w1_commands
-
-commands available for master or slave operations

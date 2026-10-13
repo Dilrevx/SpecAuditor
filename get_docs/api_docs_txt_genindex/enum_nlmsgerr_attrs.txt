@@ -1,3 +1,0 @@
-Enum: enum nlmsgerr_attrs
-
-nlmsgerr attributes

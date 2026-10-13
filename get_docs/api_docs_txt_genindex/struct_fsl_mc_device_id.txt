@@ -1,9 +1,0 @@
-Struct: struct fsl_mc_device_id
-
-MC object device identifier
-
-Members
-  vendor
-    vendor ID
-  obj_type
-    MC object type

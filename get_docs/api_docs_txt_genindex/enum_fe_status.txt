@@ -1,3 +1,0 @@
-Enum: enum fe_status
-
-Enumerates the possible frontend status.

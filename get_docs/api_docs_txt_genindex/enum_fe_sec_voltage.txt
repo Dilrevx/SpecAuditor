@@ -1,3 +1,0 @@
-Enum: enum fe_sec_voltage
-
-DC Voltage used to feed the LNBf

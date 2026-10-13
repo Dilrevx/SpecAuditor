@@ -1,7 +1,0 @@
-Macro: hlist_nulls_next_rcu
-
-
-
-Parameters
-  node
-    element of the list.

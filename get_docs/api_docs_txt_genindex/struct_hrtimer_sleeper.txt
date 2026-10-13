@@ -1,9 +1,0 @@
-Struct: struct hrtimer_sleeper
-
-simple sleeper structure
-
-Members
-  timer
-    embedded timer structure
-  task
-    task to wake up

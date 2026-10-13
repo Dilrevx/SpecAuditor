@@ -1,2 +1,0 @@
-Macro: XSDFEC_CLEAR_STATS
-

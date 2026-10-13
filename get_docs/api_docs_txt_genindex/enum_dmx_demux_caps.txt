@@ -1,3 +1,0 @@
-Enum: enum dmx_demux_caps
-
-MPEG-2 TS Demux capabilities bitmap

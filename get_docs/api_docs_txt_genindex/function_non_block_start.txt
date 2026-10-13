@@ -1,2 +1,0 @@
-Function: non_block_start
-

@@ -1,7 +1,0 @@
-Struct: struct xarray
-
-The anchor of the XArray.
-
-Members
-  xa_lock
-    Lock that protects the contents of the XArray.

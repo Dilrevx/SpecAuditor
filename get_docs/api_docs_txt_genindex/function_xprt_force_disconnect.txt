@@ -1,7 +1,0 @@
-Function: void xprt_force_disconnect ( struct rpc_xprt * xprt )
-
-force a transport to disconnect
-
-Parameters
-  struct rpc_xprt *xprt
-    transport to disconnect

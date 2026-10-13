@@ -1,3 +1,0 @@
-Enum: enum dpll_pin_capabilities
-
-defines possible capabilities of a pin, valid flags on DPLL_A_PIN_CAPABILITIES attribute

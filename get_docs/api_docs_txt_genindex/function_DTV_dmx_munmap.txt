@@ -1,2 +1,0 @@
-Function: int munmap ( void * start , size_t length )
-

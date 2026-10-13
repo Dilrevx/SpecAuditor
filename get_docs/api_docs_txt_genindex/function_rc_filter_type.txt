@@ -1,3 +1,0 @@
-Function: enum rc_filter_type
-
-Filter type constants.

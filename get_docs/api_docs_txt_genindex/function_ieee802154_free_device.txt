@@ -1,2 +1,0 @@
-Function: void ieee802154_free_device ( struct ieee802154_dev * dev )
-

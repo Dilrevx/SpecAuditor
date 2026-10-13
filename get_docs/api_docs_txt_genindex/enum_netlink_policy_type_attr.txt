@@ -1,3 +1,0 @@
-Enum: enum netlink_policy_type_attr
-
-policy type attributes

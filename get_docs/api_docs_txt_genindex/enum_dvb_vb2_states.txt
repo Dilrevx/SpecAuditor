@@ -1,3 +1,0 @@
-Enum: enum dvb_vb2_states
-
-states to control VB2 state machine

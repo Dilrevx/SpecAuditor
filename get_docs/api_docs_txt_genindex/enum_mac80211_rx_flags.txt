@@ -1,3 +1,0 @@
-Enum: enum mac80211_rx_flags
-
-receive flags

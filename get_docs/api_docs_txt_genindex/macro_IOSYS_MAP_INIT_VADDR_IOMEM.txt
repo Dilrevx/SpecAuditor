@@ -1,7 +1,0 @@
-Macro: IOSYS_MAP_INIT_VADDR_IOMEM
-
-
-
-Parameters
-  vaddr_iomem_
-    An I/O-memory address

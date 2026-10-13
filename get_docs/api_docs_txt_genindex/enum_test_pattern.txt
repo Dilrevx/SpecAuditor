@@ -1,3 +1,0 @@
-Enum: enum test_pattern
-
-Test patterns for test testing

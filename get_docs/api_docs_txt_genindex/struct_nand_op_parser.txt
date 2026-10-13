@@ -1,9 +1,0 @@
-Struct: struct nand_op_parser
-
-NAND controller operation parser descriptor
-
-Members
-  patterns
-    array of supported patterns
-  npatterns
-    length of the patterns array

@@ -1,7 +1,0 @@
-Function: struct net * rpc_net_ns ( struct rpc_clnt * clnt )
-
-Get the network namespace for this RPC client
-
-Parameters
-  struct rpc_clnt *clnt
-    RPC client to query

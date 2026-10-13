@@ -1,3 +1,0 @@
-Enum: enum fecap_scale_params
-
-scale types for the quality parameters.

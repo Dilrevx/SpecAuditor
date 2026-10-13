@@ -1,2 +1,0 @@
-Type: type media_v2_pad
-

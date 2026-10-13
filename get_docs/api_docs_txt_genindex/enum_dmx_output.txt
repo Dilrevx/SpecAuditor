@@ -1,3 +1,0 @@
-Enum: enum dmx_output
-
-Output for the demux.

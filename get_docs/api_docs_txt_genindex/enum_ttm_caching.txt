@@ -1,3 +1,0 @@
-Enum: enum ttm_caching
-
-CPU caching and BUS snooping behavior.

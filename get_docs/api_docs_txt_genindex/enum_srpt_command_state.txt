@@ -1,3 +1,0 @@
-Enum: enum srpt_command_state
-
-SCSI command state managed by SRPT

@@ -1,2 +1,0 @@
-Macro: non_block_end
-

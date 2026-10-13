@@ -1,3 +1,0 @@
-Enum: enum vfl_devnode_type
-
-type of V4L2 device node

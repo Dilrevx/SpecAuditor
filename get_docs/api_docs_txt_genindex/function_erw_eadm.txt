@@ -1,9 +1,0 @@
-Function: struct erw_eadm
-
-EADM Subchannel extended report word
-
-Members
-  b
-    aob error
-  r
-    arsb error

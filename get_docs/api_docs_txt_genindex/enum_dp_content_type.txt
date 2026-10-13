@@ -1,3 +1,0 @@
-Enum: enum dp_content_type
-
-drm DP Content Type

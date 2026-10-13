@@ -1,3 +1,0 @@
-Function: enum dim_step_result
-
-DIM algorithm step results
